@@ -10,6 +10,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { AboutComponent } from './pages/about/about.component';
 import { MarketComponent } from './pages/market/market.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MarketComponent } from './pages/market/market.component';
     MainComponent,
     ContactsComponent,
     AboutComponent,
-    MarketComponent
+    MarketComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
