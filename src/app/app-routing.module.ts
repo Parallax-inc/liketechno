@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'market', component: MarketComponent },
+  { path: 'catalog', component: MarketComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
   // {
