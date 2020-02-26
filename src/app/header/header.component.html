@@ -12,7 +12,16 @@
     <div class="search"></div>
     <div class="bascet"></div>
     <menu>
-        <div class="menuBnt">Меню</div>
+        <div class="menuBnt" (click)="showMenu()">Меню</div>
+        <div class="menuVertical" [ngClass]="{hideMenu:hideMenu}">
+            <ul>
+                <li>Ноутбуки</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <a routerLink="main">Главная</a>
         <a routerLink="catalog">Каталог товаров</a>
         <a routerLink="services">Услуги</a>

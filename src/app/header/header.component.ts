@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  hideMenu: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  showMenu() {
+    if (this.hideMenu) {
+      this.hideMenu = false;
+    } else {
+      this.hideMenu = true;
+    }
+  }
 }
