@@ -1,4 +1,26 @@
 <div class="adminContainer">
-    <div class="header"></div>
-    <div class="menu"></div>1
+    <div class="header">
+        <span>Панель администратора</span>
+    </div>
+    <nav>
+        <ul>
+            <li>Каталог</li>
+            <ul>
+                <li routerLink="products">Товары</li>
+                <li routerLink="category">Категории</li>
+                <li routerLink="brends">Бренды</li>
+                <!-- <li routerLink="products">свойства</li> -->
+            </ul>
+            <li>Заказы</li>
+            <li>Покупатели</li>
+            <li>Обратная связь</li>
+            <li>Банеры</li>
+        </ul>
+    </nav>
+
+
+
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
 </div>
