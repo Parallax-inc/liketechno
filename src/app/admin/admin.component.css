@@ -6,7 +6,8 @@
     right: 0;
     background-color: white;
 }
-.header{
+
+.header {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,7 +18,19 @@
     font-size: 20px;
     padding: 5px 25px;
 }
-nav{
+
+.exit {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    padding: 5px 25px;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav {
     width: 300px;
     position: absolute;
     left: 0;
@@ -25,28 +38,50 @@ nav{
     bottom: 0;
     background-color: #2B303B;
     color: #507795;
+    display: block;
 }
-nav>ul>li{
+
+nav>ul>li {
     width: 100%;
     cursor: pointer;
     list-style-type: none;
     padding: 10px 25px;
 }
-nav>ul>li:hover{
+
+nav>ul>li:hover {
     color: white;
 }
-nav>ul>ul>li{
+
+nav>ul>ul>li {
     cursor: pointer;
     list-style-type: none;
     padding: 10px 45px;
     background-color: #21252D;
+    outline: none;
 }
-nav>ul>ul>li:hover{
+
+nav>ul>ul>li:hover {
     color: white;
 }
-.main{
+
+.catalogList {
+    height: 0px;
+    transition: 0.5s;
+    transform-origin: top bottom;
+    transform: scaleY(1);
+    overflow: hidden;
+}
+
+.catalogListShow {
+    height: 120px;
+}
+
+.main {
     width: 100%;
     height: 100%;
     padding-left: 300px;
     padding-top: 50px;
+}
+.active{
+    color: whitesmoke;
 }

@@ -14,6 +14,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './admin/catalog/products/products.component';
 import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
+import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BrendsComponent } from './admin/catalog/brends/brends.component';
     ServicesComponent,
     ProductsComponent,
     CategoryComponent,
-    BrendsComponent
+    BrendsComponent,
+    OrdersListComponent
   ],
   imports: [
     BrowserModule,
