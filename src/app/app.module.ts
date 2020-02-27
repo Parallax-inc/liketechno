@@ -11,6 +11,10 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { AboutComponent } from './pages/about/about.component';
 import { MarketComponent } from './pages/market/market.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ProductsComponent } from './admin/catalog/products/products.component';
+import { CategoryComponent } from './admin/catalog/category/category.component';
+import { BrendsComponent } from './admin/catalog/brends/brends.component';
+import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { ServicesComponent } from './pages/services/services.component';
     ContactsComponent,
     AboutComponent,
     MarketComponent,
-    ServicesComponent
+    ServicesComponent,
+    ProductsComponent,
+    CategoryComponent,
+    BrendsComponent,
+    OrdersListComponent
   ],
   imports: [
     BrowserModule,
