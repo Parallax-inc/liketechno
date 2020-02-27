@@ -1,0 +1,45 @@
+.container{
+    background-color: #EDEFF0;
+    height: 100vh;
+}
+.wrapper{
+    padding: 60px 40px;
+}
+.container-header{
+    display: flex;
+}
+.container-header p{
+    font-size: 26px;
+}
+.add{
+    margin-left: 50px;
+    padding: 8px 25px;
+    background-color: #1b7733;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: #15662b;
+}
+.container-admin-main{
+    margin-top: 20px;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border-radius: 5px;
+}
+.container-table{
+    height: 60px;
+    background-color: #2B303B;
+}
+.table-info{
+    color: white;
+    display: flex;
+}
+.container-table-render{
+    background-color: ;
+    height: 100vh;
+}
