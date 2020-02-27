@@ -9,7 +9,7 @@ import { MarketComponent } from './pages/market/market.component';
 import { ProductsComponent } from './admin/catalog/products/products.component';
 import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
-
+import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -23,6 +23,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'products', pathMatch: 'full' },
       { path: 'products', component: ProductsComponent },
       { path: 'category', component: CategoryComponent },
+      { path: 'category/add', component: CategoryAddComponent },
       { path: 'brends', component: BrendsComponent },
     ]
   },

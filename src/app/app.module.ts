@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +19,7 @@ import { ProductsComponent } from './admin/catalog/products/products.component';
 import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
+import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +35,15 @@ import { OrdersListComponent } from './admin/orders/orders-list/orders-list.comp
     ProductsComponent,
     CategoryComponent,
     BrendsComponent,
-    OrdersListComponent
+    OrdersListComponent,
+    CategoryAddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
