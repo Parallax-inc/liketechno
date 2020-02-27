@@ -42,7 +42,7 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule 
+    SlickCarouselModule,
     FormsModule,
     HttpClientModule,
     HttpModule
