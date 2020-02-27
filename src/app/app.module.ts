@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -41,6 +42,7 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SlickCarouselModule,
     FormsModule,
     HttpClientModule,
     HttpModule
