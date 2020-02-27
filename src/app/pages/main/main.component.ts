@@ -19,10 +19,10 @@ export class MainComponent implements OnInit {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 500,
+    speed: 1000,
     infinite: true,
     lazyLoad: 'ondemand',
-    dots: false,
+    dots: true,
     fade: true,
     pauseOnHover: false
   };
