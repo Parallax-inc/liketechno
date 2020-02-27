@@ -1,0 +1,77 @@
+.headerContainer {
+    width: 1200px;
+    min-height: 150px;
+    /* border: 1px solid lightgrey; */
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+
+.topmain {
+    width: 100%;
+    height: 40px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stripHorizontal {
+    position:absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 40px;
+}
+
+.topmain>div>span {
+    margin-right: 25px;
+}
+
+.stripVertical {
+    width: 1px;
+    height: 20px;
+    border-right: 1px solid grey;
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+    background-image: url(/assets/img/Logo.jpg);
+    background-repeat: no-repeat;
+}
+menu{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+menu>a{
+    margin-left: 35px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.menuBnt{
+    width: 250px;
+    height: 100%;
+    background-color: #A3D133;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menuVertical{
+    width: 250px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: 165px;
+}
+.hideMenu{
+    display: none;
+}

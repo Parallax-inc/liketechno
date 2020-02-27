@@ -1,1 +1,31 @@
-<p>header works!</p>
+<div class="headerContainer">
+    <div class="topmain">
+        <p>Интернет магазин Liketechno</p>
+        <div>
+            <span>Контакты</span>
+            <span class="stripVertical"></span>
+            <span>Мой кабинет</span>
+        </div>
+    </div>
+    <div class="stripHorizontal"></div>
+    <div class="logo"></div>
+    <div class="search"></div>
+    <div class="bascet"></div>
+    <menu>
+        <div class="menuBnt" (click)="showMenu()">Меню</div>
+        <div class="menuVertical" [ngClass]="{hideMenu:hideMenu}">
+            <ul>
+                <li>Ноутбуки</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <a routerLink="main">Главная</a>
+        <a routerLink="catalog">Каталог товаров</a>
+        <a routerLink="services">Услуги</a>
+        <a routerLink="contacts">Контакты</a>
+        <a routerLink="about">О нас</a>
+    </menu>
+</div>
