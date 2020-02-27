@@ -2,7 +2,7 @@
 <div class="mainContainer">
     <div class="slider">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-            <div ngxSlickItem class="slide" *ngFor="let item of slides">
+            <div ngxSlickItem class="slide1" *ngFor="let item of slides">
                 <img src="{{item.img}}" alt="">
             </div>
         </ngx-slick-carousel>
@@ -10,5 +10,36 @@
     <div class="recomended">
         <div class="title"><span> Рекомендуемые</span></div>
         <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+        <div class="product"></div>
+    </div>
+    <div class="banner">
+        <div class="bannerText"><h3> Гарантия <br> на ноутбуки <br> 1 месяц</h3></div>
+        <span></span>
+        <div class="bannerImg">
+            <img src="/assets/img/waranty_banner.png" alt="">
+        </div>
+    </div>
+    <div class="lastAdd">
+        <div class="title"><span> Недавно добавленные</span></div>
+        <div class="sliderLastAddProd">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigLastAddProd">
+                <div ngxSlickItem class="slide" *ngFor="let item of lastAddProd">
+                    <img src="{{item.img}}" alt="">
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+    <div class="slideBrends">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigBrends">
+            <div ngxSlickItem class="slideBrend" *ngFor="let item of brends">
+                <img src="{{item.img}}" alt="">
+            </div>
+        </ngx-slick-carousel>
     </div>
 </div>
