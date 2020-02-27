@@ -1,3 +1,8 @@
 <div class="stripHorizontal"></div>
 <div class="mainContainer">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem class="slide" *ngFor="let item of slides">
+            <img src="{{item.img}}" alt="">
+        </div>
+    </ngx-slick-carousel>
 </div>
