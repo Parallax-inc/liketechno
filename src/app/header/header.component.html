@@ -12,14 +12,16 @@
     <div class="search"></div>
     <div class="bascet"></div>
     <menu>
-        <div class="menuBnt" (click)="showMenu()">Меню</div>
+        <div class="menuBnt" (click)="showMenu()">Меню
+            <img src="/assets/img/menu.svg" alt="">
+        </div>
         <div class="menuVertical" [ngClass]="{hideMenu:hideMenu}">
             <ul>
                 <li>Ноутбуки</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Компьютеры</li>
+                <li>Комплектующие</li>
+                <li>Переферия</li>
+                <li>Аксесуары</li>
             </ul>
         </div>
         <a routerLink="main">Главная</a>
