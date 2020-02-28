@@ -21,6 +21,7 @@ import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
+import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
     CategoryComponent,
     BrendsComponent,
     OrdersListComponent,
-    CategoryAddComponent
+    CategoryAddComponent,
+    CategoryEditComponent
   ],
   imports: [
     BrowserModule,

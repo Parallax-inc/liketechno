@@ -3,17 +3,21 @@
     <div class="wrapper">
         <div class="container-header">
             <p>Категории - 0</p>
-            <div class="add">+ Добавить категорию</div>
+            <div class="add" routerLink="/admin/category/add">+ Добавить категорию</div>
         </div>
         <div class="container-admin-main">
             <div class="container-table">
                 <div class="table-info">
-                    <input type="checkbox" name="" id="">
-                    <p>Название</p>
-                    <i class="fas fa-trash"></i>
+                    <input type="checkbox" name="" id="" class="input">
+                    <p class="name">НАЗВАНИЕ</p>
+                    <p class="action">ДЕЙСТВИЯ</p>
                 </div>
                 <div class="table-render">
-                    
+                    <div *ngFor="let item of getCategoryArray; let i=index" [routerLink]="[ '/admin/category/edit', item._id ]" class="render">
+                        <input type="checkbox" name="" id="" class="input">
+                        <p class="name">{{item.title}}</p>
+                        <i class="action fas fa-trash"></i>
+                    </div>
                 </div>
             </div>
         </div>
