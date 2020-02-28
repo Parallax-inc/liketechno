@@ -11,6 +11,13 @@ import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
+import { PreferenceComponent } from './admin/catalog/preference/preference.component';
+import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
+import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
+
+
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
@@ -22,10 +29,13 @@ const routes: Routes = [
     path: 'admin', component: AdminComponent , children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },
       { path: 'products', component: ProductsComponent },
+      { path: 'products/add', component: ProdAddComponent },
+      { path: 'products/edit/:id', component: ProdEditComponent },
       { path: 'category', component: CategoryComponent },
       { path: 'category/add', component: CategoryAddComponent },
       { path: 'category/edit/:id', component: CategoryEditComponent },
       { path: 'brends', component: BrendsComponent },
+      { path: 'preference', component: PreferenceComponent },
     ]
   },
 
