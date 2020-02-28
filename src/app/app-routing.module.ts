@@ -10,7 +10,7 @@ import { ProductsComponent } from './admin/catalog/products/products.component';
 import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
-
+import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
@@ -20,10 +20,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {
     path: 'admin', component: AdminComponent , children: [
-      { path: '', redirectTo: 'products', pathMatch: 'full' },
+      // { path: '', redirectTo: 'products', pathMatch: 'full' },
       { path: 'products', component: ProductsComponent },
       { path: 'category', component: CategoryComponent },
       { path: 'category/add', component: CategoryAddComponent },
+      { path: 'category/edit/:id', component: CategoryEditComponent },
       { path: 'brends', component: BrendsComponent },
     ]
   },

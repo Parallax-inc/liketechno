@@ -11,7 +11,18 @@ export class WebService {
 
   constructor(private webService: BgService) { }
 
+  
   creatingCategory(data: string) {
-    return this.webService.post('api/category', data)
+    return this.webService.post('api/category/add', data)
   }
+  getCategory() {
+    return this.webService.get('api/category');
+  }
+  getCategoryByID(id: string){
+    return this.webService.get(`api/category/edit/${id}`);
+  }
+  updateCategoryByID(id: string, response: string) {
+    return this.webService.patch(`api/category/edit-update/${id}`, response );
+  }
+
 }
