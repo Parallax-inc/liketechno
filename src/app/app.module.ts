@@ -22,6 +22,9 @@ import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
+import { PreferenceComponent } from './admin/catalog/preference/preference.component';
+import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
+import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { CategoryEditComponent } from './admin/catalog/category/category-edit/ca
     BrendsComponent,
     OrdersListComponent,
     CategoryAddComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    PreferenceComponent,
+    ProdAddComponent,
+    ProdEditComponent
   ],
   imports: [
     BrowserModule,
