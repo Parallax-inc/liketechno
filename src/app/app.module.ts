@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,7 +54,8 @@ import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.
     SlickCarouselModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
