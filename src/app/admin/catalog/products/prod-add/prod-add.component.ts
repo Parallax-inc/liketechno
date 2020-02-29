@@ -15,7 +15,7 @@ export class ProdAddComponent implements OnInit {
 
   imgAddArray = [];
   fileToUpload: File = null;
-  
+
 
   constructor(private api: WebService) { }
 
@@ -28,19 +28,19 @@ export class ProdAddComponent implements OnInit {
   preShowImg(files) {
     console.log(files[0]);
     let reader = new FileReader;
-    let url = URL.createObjectURL(files[0]);
-    console.log(url);
-    url = url.slice(0,4)
-    this.imgAddArray.push(url);
-    console.log(this.imgAddArray);
-    
-    // reader.onload = function(e){
-  
-    //   console.log(blob.reader.result);
-    // }
-    // reader.readAsDataURL(files[0]);
+    // let url = URL.createObjectURL(files[0]);
+    // console.log(url);
+    // url = url.slice(5);
+    // this.imgAddArray.push(`${url}.jpg`);
+    // console.log(this.imgAddArray);
 
-    
-    
+    reader.onload = function (e) {
+
+      console.log(reader.result);
+    }
+    reader.readAsDataURL(files[0]);
+
+
+
   }
 }
