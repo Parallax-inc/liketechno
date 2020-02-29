@@ -22,6 +22,9 @@ import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
+import { AccountComponent } from './pages/account/account.component';
+import { IsLoggedIn } from './auth/isLogged.guard';
+import { AuthService } from './shared/services/auth.service'
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { CategoryEditComponent } from './admin/catalog/category/category-edit/ca
     BrendsComponent,
     OrdersListComponent,
     CategoryAddComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,7 @@ import { CategoryEditComponent } from './admin/catalog/category/category-edit/ca
     HttpClientModule,
     HttpModule
   ],
-  providers: [],
+  providers: [IsLoggedIn],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

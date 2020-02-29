@@ -11,6 +11,9 @@ import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
+import { AccountComponent } from './pages/account/account.component';
+import { IsLoggedIn } from './auth/isLogged.guard';
+
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
@@ -18,14 +21,15 @@ const routes: Routes = [
   { path: 'catalog', component: MarketComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'account', component: AccountComponent },
   {
-    path: 'admin', component: AdminComponent , children: [
+    path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },
-      { path: 'products', component: ProductsComponent },
-      { path: 'category', component: CategoryComponent },
-      { path: 'category/add', component: CategoryAddComponent },
-      { path: 'category/edit/:id', component: CategoryEditComponent },
-      { path: 'brends', component: BrendsComponent },
+      { path: 'products', component: ProductsComponent, canActivate:[IsLoggedIn] },
+      { path: 'category', component: CategoryComponent, canActivate:[IsLoggedIn] },
+      { path: 'category/add', component: CategoryAddComponent, canActivate:[IsLoggedIn] },
+      { path: 'category/edit/:id', component: CategoryEditComponent, canActivate:[IsLoggedIn] },
+      { path: 'brends', component: BrendsComponent, canActivate:[IsLoggedIn] },
     ]
   },
 
