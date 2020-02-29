@@ -47,7 +47,7 @@ import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.
     OrdersListComponent,
     CategoryAddComponent,
     CategoryEditComponent,
-    AccountComponent
+    AccountComponent,
     PreferenceComponent,
     ProdAddComponent,
     ProdEditComponent
