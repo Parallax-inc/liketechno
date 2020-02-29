@@ -11,7 +11,6 @@ export class WebService {
 
   constructor(private webService: BgService) { }
 
-  
   creatingCategory(data: string) {
     return this.webService.post('api/category/add', data)
   }
@@ -25,4 +24,11 @@ export class WebService {
     return this.webService.patch(`api/category/edit-update/${id}`, response );
   }
 
+  // account
+  creatingUsers(data: string) {
+    return this.webService.post('api/users/register', data)
+  }
+  getUserByID(id: string){
+    return this.webService.get(`api/users/s/${id}`);
+  }
 }
