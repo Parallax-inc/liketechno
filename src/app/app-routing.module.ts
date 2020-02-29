@@ -13,6 +13,10 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
 import { AccountComponent } from './pages/account/account.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
+import { PreferenceComponent } from './admin/catalog/preference/preference.component';
+import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
+import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -25,11 +29,20 @@ const routes: Routes = [
   {
     path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },
+
       { path: 'products', component: ProductsComponent, canActivate:[IsLoggedIn] },
       { path: 'category', component: CategoryComponent, canActivate:[IsLoggedIn] },
       { path: 'category/add', component: CategoryAddComponent, canActivate:[IsLoggedIn] },
       { path: 'category/edit/:id', component: CategoryEditComponent, canActivate:[IsLoggedIn] },
       { path: 'brends', component: BrendsComponent, canActivate:[IsLoggedIn] },
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/add', component: ProdAddComponent },
+      { path: 'products/edit/:id', component: ProdEditComponent },
+      { path: 'category', component: CategoryComponent },
+      { path: 'category/add', component: CategoryAddComponent },
+      { path: 'category/edit/:id', component: CategoryEditComponent },
+      { path: 'brends', component: BrendsComponent },
+      { path: 'preference', component: PreferenceComponent },
     ]
   },
 

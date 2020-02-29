@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,9 @@ import { CategoryEditComponent } from './admin/catalog/category/category-edit/ca
 import { AccountComponent } from './pages/account/account.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
 import { AuthService } from './shared/services/auth.service'
+import { PreferenceComponent } from './admin/catalog/preference/preference.component';
+import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
+import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,9 @@ import { AuthService } from './shared/services/auth.service'
     CategoryAddComponent,
     CategoryEditComponent,
     AccountComponent
+    PreferenceComponent,
+    ProdAddComponent,
+    ProdEditComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,8 @@ import { AuthService } from './shared/services/auth.service'
     SlickCarouselModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    CKEditorModule
   ],
   providers: [IsLoggedIn],
   bootstrap: [AppComponent]

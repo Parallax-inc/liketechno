@@ -73,14 +73,16 @@ nav>ul>ul>li:hover {
 }
 
 .catalogListShow {
-    height: 120px;
+    height: 160px;
 }
 
 .main {
     width: 100%;
     height: 100%;
-    padding-left: 280px;
-    padding-top: 25px;
+    padding-left: 320px;
+    padding-right: 20px;
+    padding-top: 60px;
+    background-color: #EDEFF0;
 }
 .active{
     color: whitesmoke;

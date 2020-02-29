@@ -1,0 +1,117 @@
+.containerProdAdd {
+    width: 100%;
+}
+
+form {
+    margin-top: 25px;
+}
+
+input[type='text'] {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid lightgrey;
+    margin-right: 25px;
+    font-weight: normal;
+}
+
+.imageAdd {
+    width: 100%;
+    min-height: 250px;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.imageAdd>h3{
+    width: 100%;
+}
+.inputfile + label {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+    font-size: 90px;
+    padding-top: 15px;
+    color: grey;
+}
+
+.imgPise {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
+}
+
+.imgPise>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preference {
+    width: 40%;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.preference>span {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 20px;
+    background-color: #9F9F9F;
+    font-size: 18px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.preference>span>input {
+    height: 30px;
+    margin-right: 0;
+}
+
+.preference>span>p {
+    margin-top: 3px;
+    color: whitesmoke;
+}
+
+.description {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 25px;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+
+.description>p {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.addBtn {
+    padding: 10px 25px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin: 25px 0px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.addBtn:hover {
+    opacity: 1;
+}
