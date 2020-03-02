@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  showMore: boolean = true;
+
   constructor() { }
 
+
   ngOnInit() {
+  }
+
+  public clickMore(): void {
+    console.log('dfghnm,');
   }
 
 }
