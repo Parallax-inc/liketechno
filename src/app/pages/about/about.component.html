@@ -49,63 +49,26 @@
             </div>
             
         </div>
+
+
+
         <div class="block-two">
             <p class="text-title">What can we do for you ?</p>
 
-            <div class="block2">
-                <div class="switch">
-                    <button class="active-button" (click)="clickMore()">-</button>
-                    <span class="text-title">Support 24/7</span>
-                </div>
-                <div>
-                    Vestibulum velit nibh, egestas vel faucibus vitae, feugiat sollicitudin urna. Praesent iaculis id ipsum sit amet pretium. Aliquam tristique sapien nec enim euismod, scelerisque facilisis arcu consectetur.
-                </div>
-            </div>
-
-            <div class="block2">
-                <div class="switch">
-                    <button class="unactive-button" (click)="clickMore()">+</button>
-                    <span class="text-title">Best Quality</span>
-                </div>
-
-                <div>
-                    Vestibulum velit nibh, egestas vel faucibus vitae, feugiat sollicitudin urna. Praesent iaculis id ipsum sit amet pretium. Aliquam tristique sapien nec enim euismod, scelerisque facilisis arcu consectetur.
+            <div class="block2" *ngFor="let item of switchInfo">
+                <button class="switch" (click)="clickMore(item.id)" >
+                    <button class="{{item.class}}" >
+                        <span *ngIf="item.show">+</span>
+                        <span *ngIf="!item.show">−</span>
+                    </button>
+                    <span class="b2-text">{{item.title}}</span>
+                </button>
+                <div *ngIf="item.show" >
+                    {{ item.text }}
                 </div>
             </div>
-
-            <div class="block2">
-                <div class="switch">
-                    <button class="unactive-button" (click)="clickMore()">+</button>
-                    <span class="text-title">Fastest Delivery</span>
-                </div>
-                <div>
-                    Vestibulum velit nibh, egestas vel faucibus vitae, feugiat sollicitudin urna. Praesent iaculis id ipsum sit amet pretium. Aliquam tristique sapien nec enim euismod, scelerisque facilisis arcu consectetur.
-                </div>
-            </div>
-
-            <div class="block2">
-                <div class="switch">
-                    <button class="unactive-button" (click)="clickMore()">+</button>
-                    <span class="text-title">Customer Care</span>
-                </div>
-
-                <div>
-                    Vestibulum velit nibh, egestas vel faucibus vitae, feugiat sollicitudin urna. Praesent iaculis id ipsum sit amet pretium. Aliquam tristique sapien nec enim euismod, scelerisque facilisis arcu consectetur.
-                </div>
-            </div>
-
-            <div class="block2">
-                <div class="switch">
-                    <button class="unactive-button" (click)="clickMore()">+</button>
-                    <span class="text-title">Over 200 Satisfied Customers</span>
-                </div>
-
-                <div>
-                    Vestibulum velit nibh, egestas vel faucibus vitae, feugiat sollicitudin urna. Praesent iaculis id ipsum sit amet pretium. Aliquam tristique sapien nec enim euismod, scelerisque facilisis arcu consectetur.
-                </div>
-            </div>
-
-            
         </div>
+
+
     </div>
 </div>

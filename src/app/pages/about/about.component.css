@@ -27,13 +27,20 @@
     margin-left: 10px;
     width: 28%;
 }
-
 .text-title{
-    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600; 
+}
+
+.b2-text{
     font-size: 20px;
     margin-bottom: 15px;
 }
+.b2-text:hover{
+    font-weight: 600;
 
+}
 .text-title + p{
     line-height: 25px;
     font-size: 13px;
@@ -66,13 +73,22 @@
 .block2 .switch{
     width: 100%;
     border: 1px solid rgb(219, 219, 219);
-    /* border-radius: 7px; */
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     padding: 3px;
     text-align: left;
-    
+    margin-top: 15px;
+    background-color: white;
+    height: 50px;
 
+}
+
+
+.switch:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
 }
 .switch span{
     font-size: 18px;
@@ -82,22 +98,23 @@
     width: 40px;
     height: 40px;
     border-radius: 7px;
-    font-size: 25px;
     color: rgb(82, 82, 82);
     margin-right: 25px;
-    /* vertical-align: middle; */
+
+}
+button span{
+    font-size: 45px;
 
 }
 
 .active-button{
     background-color: #A3D133;
     border: 0;
-
 }
 .unactive-button{
     background-color: white;
     border: 1px solid rgb(219, 219, 219);
-
+    content: '-';
 }
 
 .switch+div{
@@ -110,5 +127,9 @@
     padding: 10px;
     font-size: 14px;
 
+}
 
+button:focus{
+    border: 0;
+    outline: 0;
 }
