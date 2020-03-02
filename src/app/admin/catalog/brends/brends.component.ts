@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { WebService } from 'src/app/shared/services/web.service';
 
 @Component({
   selector: 'app-brends',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brends.component.css']
 })
 export class BrendsComponent implements OnInit {
-  imgBrand: any;
+  logo_img: any;
   message: string;
-  constructor() { }
+  fileImg: any;
+  typeFileImg: any;
+  formData: any;
+  nameBrends: string;
+  getBrendsArray = [];
+  constructor(private api: WebService) { }
 
   ngOnInit() {
+    this.api.getBrends().subscribe((res) => {
+      this.getBrendsArray = res as [];
+      console.log(this.getBrendsArray);
+    })
   }
 
   preview(files) {
@@ -24,9 +35,29 @@ export class BrendsComponent implements OnInit {
     let reader = new FileReader();
     reader.readAsDataURL(files[0]);
     reader.onload = (e) => {
-      this.imgBrand = reader.result;
+      this.logo_img = reader.result;
     }
+
+    this.fileImg = files[0];
+    this.typeFileImg = mimeType;
+    // 
   }
 
+  // public resetForm(form?: NgForm) {
+  //   if (form != null) {
+  //     form.resetForm();
+  //   }
+  //   this.formData = {
+  //     _id: null,
+  //     title: ''
+  //   }
+  // }
+
+  public onSubmit() {
+    let data: any = new FormData();
+    data.append('logo_img', this.fileImg);
+    data.append('nameBrends', this.nameBrends);
+    this.api.creatingBrends(data).subscribe((res: any) => {}, (err: any) => { console.log(err); })
+  }
 
 }

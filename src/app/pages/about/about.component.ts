@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
 
+  showMore: boolean = true;
+
   switchInfo = [
     {
       title: 'Support 24/7',
@@ -59,11 +61,16 @@ export class AboutComponent implements OnInit {
     },
   ];
 
+
   constructor() { }
 
 
   ngOnInit() {
   }
+
+
+  public clickMore(): void {
+    console.log('dfghnm,');
 
   public clickMore(id:number): void {
     console.log(id);
@@ -78,6 +85,7 @@ export class AboutComponent implements OnInit {
 
       }
     });
+
   }
 
 }

@@ -77,11 +77,39 @@
     border-top-right-radius: 7px;
     padding: 3px;
     text-align: left;
+
+    
+
+}
+.switch span{
+    font-size: 18px;
+}
+
+.block2 button{
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 25px;
+    color: rgb(82, 82, 82);
+    margin-right: 25px;
+    /* vertical-align: middle; */
+
+}
+
+.active-button{
+    background-color: #A3D133;
+    border: 0;
+
+}
+.unactive-button{
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
     margin-top: 15px;
     background-color: white;
     height: 50px;
 
 }
+
 
 
 .switch:hover{
@@ -94,6 +122,19 @@ button:hover{
     font-size: 18px;
 }
 
+
+.switch+div{
+    border: 1px solid rgb(219, 219, 219);
+    border-top: 0;
+    margin-bottom: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+
+
+=======
 .block2 button{
     width: 40px;
     height: 40px;
