@@ -4,10 +4,11 @@
         <input type="text" name="nameBrends" id="" placeholder="Введите название товара...">
         <div class="imageAdd">
             <h3> Выберите изображения:</h3>
-            <input multiple hidden type="file" name="file" id="file" class="inputfile" (change)="preShowImg($event.target.files)" />
+            <input multiple hidden #file type="file" name="file" id="file" class="inputfile" (change)="preview(file.files)" />
             <label for="file" >+</label>
-
-            <div class="imgPise" *ngFor="let item of imgAddArray">
+            
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <div class="imgPise" *ngFor="let item of imgAddArray" >
                 <img src="{{item}}" alt="">
             </div>
 

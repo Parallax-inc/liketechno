@@ -16,7 +16,9 @@ export class ProdAddComponent implements OnInit {
   imgAddArray = [];
   fileToUpload: File = null;
 
-
+  public imagePath;
+  imgURL: any;
+  public message: string;
   constructor(private api: WebService) { }
 
   ngOnInit() {
@@ -25,22 +27,39 @@ export class ProdAddComponent implements OnInit {
     })
   }
 
-  preShowImg(files) {
-    console.log(files[0]);
-    let reader = new FileReader;
-    // let url = URL.createObjectURL(files[0]);
-    // console.log(url);
-    // url = url.slice(5);
-    // this.imgAddArray.push(`${url}.jpg`);
-    // console.log(this.imgAddArray);
+  preview(files) {
+    if (files.length === 0)
+      return;
+      var filesAmount = files.length;
+      
+    for (let i = 0; i < filesAmount; i++) {
+      // setTimeout(() => {
+        var reader = new FileReader();
+      // this.imagePath = files;
+      
+      reader.onloadend = (event) => {
+        this.imgURL = reader.result;
+        this.imgAddArray.push(reader.result)
+        console.log(reader.result);
+      }
+      reader.readAsDataURL(files[i]);
+      // }, 100);
+      // debugger
+      // var mimeType = files[i].type;
+      // if (mimeType.match(/image\/*/) == null) {
+      //   this.message = "Only images are supported.";
+      //   return;
+      // }
 
-    reader.onload = function (e) {
-
-      console.log(reader.result);
+      
+      
     }
-    reader.readAsDataURL(files[0]);
 
 
+
+
+
+    console.log(this.imgAddArray);
 
   }
 }
