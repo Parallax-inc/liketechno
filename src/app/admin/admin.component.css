@@ -1,5 +1,5 @@
 .adminContainer {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -8,7 +8,7 @@
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -32,7 +32,7 @@
 
 nav {
     width: 300px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 50px;
     bottom: 0;
@@ -73,14 +73,17 @@ nav>ul>ul>li:hover {
 }
 
 .catalogListShow {
-    height: 120px;
+    height: 160px;
 }
 
 .main {
     width: 100%;
-    height: 100%;
-    padding-left: 280px;
-    padding-top: 25px;
+    /* min-height: 500px; */
+    /* height: 100%; */
+    padding-left: 320px;
+    padding-right: 20px;
+    padding-top: 60px;
+    background-color: #EDEFF0;
 }
 .active{
     color: whitesmoke;

@@ -1,1 +1,62 @@
-<p>products works!</p>
+<div class="adminProdContainer">
+    <div class="header">
+        <h2>Товары - 15</h2>
+        <div class="addBtn" routerLink="/admin/products/add">+ Добавить товар</div>
+        <div class="search">
+            <input type="search" name="" id="" placeholder="поиск товара...">
+        </div>
+    </div>
+    <div class="filtr">
+        <form action="">
+            <select name="" id="">
+                <option value="all_prod" selected>Все товары</option>
+                <option value="hits">Хиты продаж</option>
+                <option value="for_sale">Со скидкой</option>
+                <option value="power_on">Включеннные товары</option>
+                <option value="power_off">Выключеные товары</option>
+                <option value="is_absent">Отсутствующие</option>
+                <option value="no_image">Без изображения</option>
+            </select>
+            <select name="categorys" id="">
+                <option value="" selected>Все категории</option>
+                <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
+            </select>
+            <select name="brends" id="">
+                <option value="" selected>Все бренды</option>
+                <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
+            </select>
+            <select name="quantity_show" id="">
+                <option value="5">показать по: 5</option>
+                <option value="10">показать по: 10</option>
+                <option value="25" selected>показать по: 25</option>
+                <option value="50">показать по: 50</option>
+                <option value="100">показать по: 100</option>
+            </select>
+        </form>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Фото</th>
+                <th scope="col">Название</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Количество</th>
+                <th scope="col">Активность</th>
+                <th scope="col">Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="/assets/img/DELL-vostro-3330.jpg" alt=""></td>
+                <td>Dell Wostro 3300</td>
+                <td>5000 грн</td>
+                <td>1 шт</td>
+                <td>включено</td>
+                <td>delete/edit</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

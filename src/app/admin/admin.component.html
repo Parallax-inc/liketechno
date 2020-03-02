@@ -1,4 +1,4 @@
-<div class="adminContainer">
+<div *ngIf="adminka" class="adminContainer">
     <div class="header">
         <span>Панель администратора</span>
         <div class="exit" routerLink="/main">Exit</div>
@@ -10,6 +10,7 @@
                 <li routerLink="products" routerLinkActive='active'>Товары</li>
                 <li routerLink="category" routerLinkActive='active'>Категории</li>
                 <li routerLink="brends" routerLinkActive='active'>Бренды</li>
+                <li routerLink="preference" routerLinkActive='active'>Свойства</li>
             </ul>
             <li>Заказы</li>
             <li>Покупатели</li>

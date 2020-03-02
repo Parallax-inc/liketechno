@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { WebService } from 'src/app/shared/services/web.service';
 
 @Component({
   selector: 'app-category-add',
@@ -8,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class CategoryAddComponent implements OnInit {
   formData: any;
-  constructor() { }
+  constructor(private api: WebService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -25,10 +26,7 @@ export class CategoryAddComponent implements OnInit {
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
 
-    // this.api.postTeam(formDataImg).subscribe((res: any) => {
-    //   this.refreshDate();
-    //   (<HTMLInputElement>window.document.getElementById('file')).value = "";
-    // }, (err: any) => { console.log(err); })
+    this.api.creatingCategory(data).subscribe((res: any) => {}, (err: any) => { console.log(err); })
     this.resetForm();
     delete data.id;
   }

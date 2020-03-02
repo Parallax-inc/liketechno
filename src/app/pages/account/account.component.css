@@ -1,0 +1,12 @@
+.container {
+    width: 1200px;
+    min-height: 150px;
+    /* border: 1px solid lightgrey; */
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.autherization, .register{
+    width: 50%;
+} 

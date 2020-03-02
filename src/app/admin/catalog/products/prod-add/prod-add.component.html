@@ -1,0 +1,58 @@
+<div class="containerProdAdd">
+    <h1>Добавление товара</h1>
+    <form action="">
+        <input type="text" name="nameBrends" id="" placeholder="Введите название товара...">
+        <div class="imageAdd">
+            <h3> Выберите изображения:</h3>
+            <input multiple hidden #file type="file" name="file" id="file" class="inputfile" (change)="preview(file.files)" />
+            <label for="file" >+</label>
+            
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <div class="imgPise" *ngFor="let item of imgAddArray" >
+                <img src="{{item}}" alt="">
+            </div>
+
+        </div>
+
+        <select name="categoryes" id="">
+            <option value="" disabled>Выберете категорию</option>
+            <option *ngFor="let item of getCategoryArray" value="">{{item.title}}</option>
+        </select>
+        <select name="brends" id="">
+            <option value="" disabled>Выберете бренд</option>
+            <option *ngFor="let item of getbrendsArray" value="">{{item.title}}</option>
+        </select>
+        <input type="number" placeholder="цена...">
+        <input type="number" placeholder="количество...">
+        <div class="preference">
+            <h3>Свойства товара</h3>
+            <span>
+                <p> Вес</p><input type="text" name="" id="">
+            </span>
+            <span>
+                <p> Материал</p><input type="text" name="" id="">
+            </span>
+            <span>
+                <p>Ширина</p><input type="text" name="" id="">
+            </span>
+            <span>
+                <p> Высота</p><input type="text" name="" id="">
+            </span>
+            <span>
+                <p>Длинна</p><input type="text" name="" id="">
+            </span>
+            <span>
+                <p>Хрень</p><input type="text" name="" id="">
+            </span>
+        </div>
+        <div class="description">
+            <h3>Описание товара</h3>
+            <p>Краткое описание:</p>
+            <ckeditor [editor]="Editor" [(ngModel)]="shortDescriptionProd" name="shortDescriptionProd"></ckeditor>
+            <p>Полное описание:</p>
+            <ckeditor [editor]="Editor" [(ngModel)]="fullDescriptionProd" name="fullDescriptionProd"></ckeditor>
+        </div>
+    </form>
+
+    <button class="addBtn" type="submit">+ Добавить товар</button>
+</div>

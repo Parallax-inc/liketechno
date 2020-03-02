@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,13 @@ import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
 import { OrdersListComponent } from './admin/orders/orders-list/orders-list.component';
 import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
+import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
+import { AccountComponent } from './pages/account/account.component';
+import { IsLoggedIn } from './auth/isLogged.guard';
+import { AuthService } from './shared/services/auth.service'
+import { PreferenceComponent } from './admin/catalog/preference/preference.component';
+import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
+import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +45,12 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
     CategoryComponent,
     BrendsComponent,
     OrdersListComponent,
-    CategoryAddComponent
+    CategoryAddComponent,
+    CategoryEditComponent,
+    AccountComponent,
+    PreferenceComponent,
+    ProdAddComponent,
+    ProdEditComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +58,10 @@ import { CategoryAddComponent } from './admin/catalog/category/category-add/cate
     SlickCarouselModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    CKEditorModule
   ],
-  providers: [],
+  providers: [IsLoggedIn],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
