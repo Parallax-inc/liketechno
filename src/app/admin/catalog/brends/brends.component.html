@@ -4,7 +4,23 @@
     </div>
     <form action="">
         <input type="text" name="nameBrends" id="" placeholder="Введите название бренда...">
-        <input type="file" accept="image/jpeg,image/png">
+
+        <div class="imageAdd">
+            <h3> Выберите изображения:</h3>
+            <input hidden #file type="file" name="file" id="file" class="inputfile"
+                (change)="preview(file.files)" />
+            <label for="file">+</label>
+
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <div class="imgPise">
+                <img [src]="imgBrand" alt="">
+            </div>
+
+        </div>
+
+
+
+
         <button class="addBtn" type="submit">+ Добавить бренд</button>
     </form>
 

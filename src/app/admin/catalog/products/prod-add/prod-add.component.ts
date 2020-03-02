@@ -9,16 +9,14 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class ProdAddComponent implements OnInit {
   Editor = ClassicEditor;
-  shortDescriptionProd: string;
-  fullDescriptionProd: string;
+  shortDescriptionProd: string = "";
+  fullDescriptionProd: string = "";
   getCategoryArray = [];
 
   imgAddArray = [];
   fileToUpload: File = null;
 
-  public imagePath;
-  imgURL: any;
-  public message: string;
+  message: string;
   constructor(private api: WebService) { }
 
   ngOnInit() {
@@ -30,29 +28,22 @@ export class ProdAddComponent implements OnInit {
   preview(files) {
     if (files.length === 0)
       return;
-      var filesAmount = files.length;
-      
-    for (let i = 0; i < filesAmount; i++) {
-      // setTimeout(() => {
-        var reader = new FileReader();
-      // this.imagePath = files;
-      
-      reader.onloadend = (event) => {
-        this.imgURL = reader.result;
-        this.imgAddArray.push(reader.result)
-        console.log(reader.result);
-      }
-      reader.readAsDataURL(files[i]);
-      // }, 100);
-      // debugger
-      // var mimeType = files[i].type;
-      // if (mimeType.match(/image\/*/) == null) {
-      //   this.message = "Only images are supported.";
-      //   return;
-      // }
 
-      
-      
+
+    for (let i = 0; i < files.length; i++) {
+      setTimeout(() => {
+        let mimeType = files[i].type;
+        if (mimeType.match(/image\/*/) == null) {
+          this.message = "один или нескольо файлов не являются изображениями.";
+          return;
+        }
+        let reader = new FileReader();
+        reader.readAsDataURL(files[i]);
+        reader.onload = (e) => {
+          this.imgAddArray.push(reader.result)
+        }
+      }, 0);
+
     }
 
 
