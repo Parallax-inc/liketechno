@@ -33,9 +33,9 @@
         <tbody>
             <tr *ngFor="let item of getBrendsArray; let i = index" >
                 <th scope="row">{{i+1}}</th>
-                <td><img src={{item.logo_img}} alt=""></td>
+                <td class="imgTable"><img src={{item.images}} alt=""></td>
                 <td>{{item.nameBrends}}</td>
-                <td>delete/edit</td>
+                <td><button id="deleteBtn" (click)="deleteBrend(item._id)" >delete</button> </td>
             </tr>
         </tbody>
     </table>

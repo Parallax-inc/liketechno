@@ -60,4 +60,9 @@ export class BrendsComponent implements OnInit {
     this.api.creatingBrends(data).subscribe((res: any) => {}, (err: any) => { console.log(err); })
   }
 
+  deleteBrend(id){
+    this.api.deleteBrend(id);
+    
+  }
+
 }

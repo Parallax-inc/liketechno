@@ -91,6 +91,21 @@ input[type='file']{
     opacity: 1;
 }
 
+#deleteBtn{
+    padding: 5px;
+    background-color: red;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid red;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#deleteBtn:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
 
 .table{
     width: 100%;
@@ -109,6 +124,9 @@ td{
     padding-left: 10px;
     text-align: center;
 }
+.imgTable{
+    width: 300px;
+}
 td>img{
-    height: 150px
+    height: 70px
 }

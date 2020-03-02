@@ -38,4 +38,7 @@ export class WebService {
   getBrends() {
     return this.webService.get('api/brends');
   }
+  deleteBrend(id: string) {
+    return this.webService.delete(`api/brends/${id}`);
+  }
 }
