@@ -107,5 +107,28 @@
 
             
         </div>
+
+
+
+
+        <div class="block-two">
+            <p class="text-title">What can we do for you ?</p>
+
+            <div class="block2" *ngFor="let item of switchInfo">
+                <button class="switch" (click)="clickMore(item.id)" >
+                    <button class="{{item.class}}" >
+                        <span *ngIf="item.show">+</span>
+                        <span *ngIf="!item.show">−</span>
+                    </button>
+                    <span class="b2-text">{{item.title}}</span>
+                </button>
+                <div *ngIf="item.show" >
+                    {{ item.text }}
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
