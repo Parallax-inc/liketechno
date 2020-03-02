@@ -69,8 +69,8 @@ export class AboutComponent implements OnInit {
   }
 
 
-  public clickMore(): void {
-    console.log('dfghnm,');
+  // public clickMore(): void {
+  //   console.log('dfghnm,');
 
   public clickMore(id:number): void {
     console.log(id);
