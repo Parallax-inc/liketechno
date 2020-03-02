@@ -31,4 +31,11 @@ export class WebService {
   getUserByID(id: string){
     return this.webService.get(`api/users/s/${id}`);
   }
+
+  creatingBrends(data: any) {
+    return this.webService.post('api/brends/add', data)
+  }
+  getBrends() {
+    return this.webService.get('api/brends');
+  }
 }

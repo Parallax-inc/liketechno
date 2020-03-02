@@ -2,8 +2,8 @@
     <div class="header">
         <h2>Добавление бренда</h2>
     </div>
-    <form action="">
-        <input type="text" name="nameBrends" id="" placeholder="Введите название бренда...">
+    <form method="post" autocomplete="off" enctype="multipart/form-data">
+        <input type="text" name="nameBrends" [(ngModel)]="nameBrends" placeholder="Введите название бренда...">
 
         <div class="imageAdd">
             <h3> Выберите изображения:</h3>
@@ -13,15 +13,11 @@
 
             <span style="color:red;" *ngIf="message">{{message}}</span>
             <div class="imgPise">
-                <img [src]="imgBrand" alt="">
+                <img [src]="logo_img" alt="">
             </div>
 
         </div>
-
-
-
-
-        <button class="addBtn" type="submit">+ Добавить бренд</button>
+        <button class="addBtn" (click)="onSubmit()" >+ Добавить бренд</button>
     </form>
 
 
@@ -35,10 +31,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="/assets/img/DELL-vostro-3330.jpg" alt=""></td>
-                <td>Dell Wostro 3300</td>
+            <tr *ngFor="let item of getBrendsArray; let i = index" >
+                <th scope="row">{{i+1}}</th>
+                <td><img src={{item.logo_img}} alt=""></td>
+                <td>{{item.nameBrends}}</td>
                 <td>delete/edit</td>
             </tr>
         </tbody>
