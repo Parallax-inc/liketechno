@@ -9,14 +9,14 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class ProdAddComponent implements OnInit {
   Editor = ClassicEditor;
-  shortDescriptionProd: string;
-  fullDescriptionProd: string;
+  shortDescriptionProd: string = "";
+  fullDescriptionProd: string = "";
   getCategoryArray = [];
 
   imgAddArray = [];
   fileToUpload: File = null;
 
-
+  message: string;
   constructor(private api: WebService) { }
 
   ngOnInit() {
@@ -25,22 +25,32 @@ export class ProdAddComponent implements OnInit {
     })
   }
 
-  preShowImg(files) {
-    console.log(files[0]);
-    let reader = new FileReader;
-    // let url = URL.createObjectURL(files[0]);
-    // console.log(url);
-    // url = url.slice(5);
-    // this.imgAddArray.push(`${url}.jpg`);
-    // console.log(this.imgAddArray);
+  preview(files) {
+    if (files.length === 0)
+      return;
 
-    reader.onload = function (e) {
 
-      console.log(reader.result);
+    for (let i = 0; i < files.length; i++) {
+      setTimeout(() => {
+        let mimeType = files[i].type;
+        if (mimeType.match(/image\/*/) == null) {
+          this.message = "один или нескольо файлов не являются изображениями.";
+          return;
+        }
+        let reader = new FileReader();
+        reader.readAsDataURL(files[i]);
+        reader.onload = (e) => {
+          this.imgAddArray.push(reader.result)
+        }
+      }, 0);
+
     }
-    reader.readAsDataURL(files[0]);
 
 
+
+
+
+    console.log(this.imgAddArray);
 
   }
 }

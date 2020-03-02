@@ -1,29 +1,28 @@
 <div class="container">
-
     <div class="autherization">
-        Авторизация
+        <p class="title">Авторизация</p>
         <form>
-            <p>Email</p>
+            <p>Email:</p>
             <input type="text" [(ngModel)]="login" name="login" class="form-control"
-                placeholder="Type someting">
-            <p>Enter password</p>
+                placeholder="введите email...">
+            <p>Введите пароль:</p>
             <input type="text" [(ngModel)]="userPass" name="userPass" class="form-control"
-                placeholder="Type someting">
+                placeholder="введите пароль...">
             <button (click)="auth()" type="button" class="btn btn-success">Авторизация</button>
         </form>
     </div>
     <div class="register">
-        Регистрация
+        <p class="title">Регистрация</p>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-            <p>Email</p>
+            <p>Email:</p>
             <input type="text" #email="ngModel" name="email" [(ngModel)]="formData.email" class="form-control"
-                placeholder="Type someting">
-            <p>Enter password</p>
+                placeholder="введите email...">
+            <p>Введите пароль:</p>
             <input type="text" #password="ngModel" name="password" [(ngModel)]="formData.password" class="form-control"
-                placeholder="Type someting">
-            <p>Enter confirm password 2</p>
+                placeholder="введите пароль...">
+            <p>Повторите пароль:</p>
             <input type="text" #confirm="ngModel" name="confirm" [(ngModel)]="formData.confirm" class="form-control"
-                placeholder="Type someting">
+                placeholder="введите пароль...">
 
             <button type="submit" class="btn btn-success">Регистрация</button>
         </form>
