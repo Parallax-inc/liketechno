@@ -17,6 +17,8 @@ export class PreferenceComponent implements OnInit {
   ngOnInit() {
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
+      console.log(this.getCategoryArray);
+      
     })
   }
 
@@ -27,6 +29,7 @@ export class PreferenceComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
+    console.log(data);
 
     this.api.creatingPreference(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     this.resetForm();
