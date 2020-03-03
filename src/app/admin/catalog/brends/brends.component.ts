@@ -20,7 +20,6 @@ export class BrendsComponent implements OnInit {
   ngOnInit() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
-      console.log(this.getBrendsArray);
     })
   }
 
@@ -57,12 +56,27 @@ export class BrendsComponent implements OnInit {
     let data: any = new FormData();
     data.append('logo_img', this.fileImg);
     data.append('nameBrends', this.nameBrends);
-    this.api.creatingBrends(data).subscribe((res: any) => {}, (err: any) => { console.log(err); })
+    this.api.creatingBrends(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+
+    setTimeout(() => {
+      this.api.getBrends().subscribe((res) => {
+        this.getBrendsArray = res as [];
+      })
+    }, 500);
+
   }
 
-  deleteBrend(id){
-    this.api.deleteBrend(id).subscribe((res: any) => {}, (err: any) => { console.log(err); })
-
+  deleteBrend(id) {
+    let delYes = confirm('Вы действительно хотите удалить?');
+    if (delYes) {
+      this.api.deleteBrend(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+    }
+    setTimeout(() => {
+      this.api.getBrends().subscribe((res) => {
+        this.getBrendsArray = res as [];
+      })
+    }, 500);
   }
+
 
 }

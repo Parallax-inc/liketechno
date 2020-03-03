@@ -5,10 +5,13 @@
     <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
 
         <input type="text" name="namePreference" [(ngModel)]="namePreference" placeholder="Введите название свойства...">
+        <br>
+        <p>Выберите категорию:</p>
         <select name="categorys" id="" [(ngModel)]="categorys">
-            <option value="" disabled selected>Выберите категорию</option>
+            
+            <!-- <option value="selectCategory" disabled selected>Выберите категорию</option> -->
             <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
-        </select>
+        </select><br>
         <button type="submit" class="addBtn">+ Добавить свойство</button>
     </form>
 
@@ -27,7 +30,7 @@
                 <th scope="row">{{i+1}}</th>
                 <td>{{item.category}}</td>
                 <td>{{item.nameBrends}}</td>
-                <td><button id="deleteBtn" (click)="deleteBrend(item._id)">delete</button> </td>
+                <td><button id="deleteBtn" (click)="deletePreference(item._id)">delete</button> </td>
             </tr>
         </tbody>
     </table>
