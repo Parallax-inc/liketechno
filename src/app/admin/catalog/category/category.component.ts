@@ -13,7 +13,6 @@ export class CategoryComponent implements OnInit {
   ngOnInit() {
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
-      // console.log(this.getCategoryArray);
     })
   }
 

@@ -1,0 +1,100 @@
+.adminPreferenceContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.header {
+    width: 100%;
+}
+
+* {
+    outline: none;
+}
+
+form {
+    margin-top: 25px;
+    width: 100%;
+}
+
+input[type='text'] {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid lightgrey;
+    margin-right: 25px;
+    font-weight: normal;
+}
+
+.addBtn {
+    padding: 10px 25px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin: 0px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.addBtn:hover {
+    opacity: 1;
+}
+
+#deleteBtn {
+    padding: 5px;
+    background-color: red;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid red;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+select {
+    font-size: 18px;
+    padding: 10px;
+    margin: 25px 10px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+#deleteBtn:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.table {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.thead-dark {
+    background-color: #2B303B;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+tr {
+    height: 40px;
+}
+
+td {
+    height: 150px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.imgTable {
+    width: 300px;
+}
+
+td>img {
+    height: 70px
+}

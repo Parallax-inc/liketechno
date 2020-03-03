@@ -41,4 +41,8 @@ export class WebService {
   deleteBrend(id: string) {
     return this.webService.delete(`api/brends/${id}`);
   }
+
+  creatingPreference(data: any) {
+    return this.webService.post('api/preference', data)
+  }
 }
