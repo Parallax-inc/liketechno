@@ -27,13 +27,16 @@ export class PreferenceComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    
-    this.api.creatingPreference(data).subscribe((res: any) => {}, (err: any) => { console.log(err); })
+
+    this.api.creatingPreference(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     this.resetForm();
     delete data.id;
   }
 
   deletePreference(id) {
-    this.api.deletePreference(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+    let delYes = confirm('Вы действительно хотите удалить?');
+    if (delYes) {
+      this.api.deletePreference(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+    }
   }
 }
