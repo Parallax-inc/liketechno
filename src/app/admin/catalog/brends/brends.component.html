@@ -1,11 +1,23 @@
-<div class="adminPreferenceContainer">
+<div class="adminBrendsContainer">
     <div class="header">
-        <h2>Добавление свойства товара</h2>
+        <h2>Добавление бренда</h2>
     </div>
     <form method="post" autocomplete="off" enctype="multipart/form-data">
         <input type="text" name="nameBrends" [(ngModel)]="nameBrends" placeholder="Введите название бренда...">
 
-        <button class="addBtn" (click)="onSubmit()" >+ Добавить свойство</button>
+        <div class="imageAdd">
+            <h3> Выберите изображения:</h3>
+            <input hidden #file type="file" name="file" id="file" class="inputfile"
+                (change)="preview(file.files)" />
+            <label for="file">+</label>
+
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <div class="imgPise">
+                <img [src]="logo_img" alt="">
+            </div>
+
+        </div>
+        <button class="addBtn" (click)="onSubmit()" >+ Добавить бренд</button>
     </form>
 
 
