@@ -1,0 +1,132 @@
+.adminPreferenceContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 20px;
+}
+.header {
+    width: 100%;
+}
+
+* {
+    outline: none;
+}
+form{
+    margin-top: 25px;
+    width: 100%;
+}
+input[type='text']{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid lightgrey;
+    margin-right: 25px;
+    font-weight: normal;
+}
+input[type='file']{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.imageAdd {
+    width: 100%;
+    min-height: 250px;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.imageAdd>h3{
+    width: 100%;
+}
+.inputfile + label {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+    font-size: 90px;
+    padding-top: 15px;
+    color: grey;
+}
+
+.imgPise {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.imgPise>img {
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+
+.addBtn {
+    padding: 10px 25px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin: 0px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 20px;
+
+}
+.addBtn:hover{
+    opacity: 1;
+}
+
+#deleteBtn{
+    padding: 5px;
+    background-color: red;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid red;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#deleteBtn:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.table{
+    width: 100%;
+    margin-top: 25px;
+}
+.thead-dark{
+    background-color: #2B303B;
+    color: whitesmoke;
+    font-size: 18px;
+}
+tr{
+    height: 40px;
+}
+td{
+    height: 150px;
+    padding-left: 10px;
+    text-align: center;
+}
+.imgTable{
+    width: 300px;
+}
+td>img{
+    height: 70px
+}
