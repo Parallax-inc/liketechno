@@ -51,6 +51,8 @@ export class WebService {
   }
 
   creatingProd(data: any) {
-    return this.webService.post('api/preference', data)
+    return this.webService.post('api/product', data)
   }
+
+
 }

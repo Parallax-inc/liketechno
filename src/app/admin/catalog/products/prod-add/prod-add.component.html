@@ -15,11 +15,11 @@
         </div>
 
         <select name="categoryes" id="" [(ngModel)]="categoryes">
-            <option *ngFor="let item of getCategoryArray" value="">{{item.title}}</option>
+            <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
         </select>
         <select name="nameBrend" id="" [(ngModel)]="nameBrend">
             <option value="" disabled>Выберете бренд</option>
-            <option *ngFor="let item of getBrendsArray" value="">{{item.nameBrends}}</option>
+            <option *ngFor="let item of getBrendsArray" value="{{item.nameBrends}}">{{item.nameBrends}}</option>
         </select>
         <input type="number" placeholder="цена..." [(ngModel)]="price" name="price">
         <input type="number" placeholder="количество..." [(ngModel)]="quantity" name="quantity">
@@ -51,7 +51,8 @@
             <p>Полное описание:</p>
             <ckeditor [editor]="Editor" [(ngModel)]="fullDescriptionProd" name="fullDescriptionProd"></ckeditor>
         </div>
+        <button class="addBtn" type="submit">+ Добавить товар</button>
     </form>
 
-    <button class="addBtn" type="submit" (click)="test()" >+ Добавить товар</button>
+    
 </div>

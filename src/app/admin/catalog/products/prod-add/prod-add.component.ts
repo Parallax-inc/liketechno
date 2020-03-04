@@ -32,16 +32,20 @@ export class ProdAddComponent implements OnInit {
     this.getCategory();
   }
 
-  getBrends(){
+  getBrends() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
     })
+    console.log(this.getBrendsArray);
+
   }
 
-  getCategory(){
+  getCategory() {
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
     })
+    console.log(this.getCategoryArray);
+
   }
 
   preview(files) {
@@ -65,29 +69,13 @@ export class ProdAddComponent implements OnInit {
 
 
 
-test(){
-  console.log('work');
-  
-}
-
-
   public onSubmit(form: NgForm) {
-    console.log('work');
-    
     const data = Object.assign({}, form.value);
-    // data.append('images', this.imgAddArray);
-    // data.append('nameProd', this.nameProd);
-    // data.append('nameBrend', this.nameBrend);
-    // data.append('price', this.price);
-    // data.append('quantity', this.quantity);
-    // data.append('shortDescriptionProd', this.shortDescriptionProd);
-    // data.append('fullDescriptionProd', this.fullDescriptionProd);
+    data['images'] = this.imgAddArray;
+    this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+
 
     console.log(data);
-    // this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
-
-    
-    
     // setTimeout(() => {
     //   this.getBrends();
     // }, 500);
