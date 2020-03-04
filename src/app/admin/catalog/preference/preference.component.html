@@ -7,7 +7,7 @@
         <input type="text" name="namePreference" [(ngModel)]="namePreference" placeholder="Введите название свойства...">
         <br>
         <p>Выберите категорию:</p>
-        <select name="categorys" id="" [(ngModel)]="categorys" (change)="findIdCat($event.target.value)">
+        <select name="categorys" id="" [(ngModel)]="categorys">
             <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
         </select><br>
         <button type="submit" class="addBtn" >+ Добавить свойство</button>

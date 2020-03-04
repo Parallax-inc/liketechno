@@ -11,7 +11,7 @@ export class PreferenceComponent implements OnInit {
   getCategoryArray = [];
   namePreference: string;
   categorys: string;
-  idCategory: string;
+  // idCategory: string;
   formData: any;
   constructor(private api: WebService) { }
 
@@ -26,14 +26,14 @@ export class PreferenceComponent implements OnInit {
     })
   }
 
-  findIdCat(id) {
-    let x = this.getCategoryArray.filter((e)=>{
-      return e.title === id;
-    })
-    this.idCategory = x[0]._id;
-    console.log(this.idCategory);
+  // findIdCat(id) {
+  //   let x = this.getCategoryArray.filter((e)=>{
+  //     return e.title === id;
+  //   })
+  //   this.idCategory = x[0]._id;
+  //   console.log(this.idCategory);
 
-  }
+  // }
   
   public resetForm() {
     this.namePreference = "";
@@ -42,7 +42,7 @@ export class PreferenceComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    data['_idCategory']=`${this.idCategory}`;
+    // data['_idCategory']=`${this.idCategory}`;
     console.log(data);
 
     this.api.creatingPreference(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
