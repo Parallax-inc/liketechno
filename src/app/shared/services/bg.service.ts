@@ -24,4 +24,5 @@ export class BgService {
   delete(uri: string){
     return this.http.delete(`${this.ROOT_URL}/${uri}`);
   }
+  
 }
