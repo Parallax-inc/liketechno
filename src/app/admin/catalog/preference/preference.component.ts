@@ -45,7 +45,7 @@ export class PreferenceComponent implements OnInit {
     // data['_idCategory']=`${this.idCategory}`;
     console.log(data);
 
-    this.api.creatingPreference(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+    this.api.creatingPreference(this.categorys, data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     this.resetForm();
     delete data.id;
   }

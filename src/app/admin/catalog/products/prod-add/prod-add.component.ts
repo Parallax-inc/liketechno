@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebService } from 'src/app/shared/services/web.service';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-prod-add',
@@ -64,21 +65,28 @@ export class ProdAddComponent implements OnInit {
 
 
 
+test(){
+  console.log('work');
+  
+}
 
 
-
-  public onSubmit() {
-    let data: any = new FormData();
-    data.append('images', this.imgAddArray);
-    data.append('nameProd', this.nameProd);
-    data.append('nameBrend', this.nameBrend);
-    data.append('price', this.price);
-    data.append('quantity', this.quantity);
-    data.append('shortDescriptionProd', this.shortDescriptionProd);
-    data.append('fullDescriptionProd', this.fullDescriptionProd);
-    this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+  public onSubmit(form: NgForm) {
+    console.log('work');
+    
+    const data = Object.assign({}, form.value);
+    // data.append('images', this.imgAddArray);
+    // data.append('nameProd', this.nameProd);
+    // data.append('nameBrend', this.nameBrend);
+    // data.append('price', this.price);
+    // data.append('quantity', this.quantity);
+    // data.append('shortDescriptionProd', this.shortDescriptionProd);
+    // data.append('fullDescriptionProd', this.fullDescriptionProd);
 
     console.log(data);
+    // this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+
+    
     
     // setTimeout(() => {
     //   this.getBrends();
