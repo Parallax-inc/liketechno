@@ -66,6 +66,15 @@ form>select, form>input{
     outline: none;
 
 }
+form>span{
+    font-size: 18px;
+}
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
 .preference {
     width: 600px;
     background-color: white;

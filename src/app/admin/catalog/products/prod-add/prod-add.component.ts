@@ -13,6 +13,7 @@ export class ProdAddComponent implements OnInit {
   shortDescriptionProd: string = "";
   fullDescriptionProd: string = "";
   getCategoryArray = [];
+  recomend: boolean = false;
 
   getBrendsArray = [];
   imgAddArray = [];
