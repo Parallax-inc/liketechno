@@ -8,11 +8,9 @@
         <br>
         <p>Выберите категорию:</p>
         <select name="categorys" id="" [(ngModel)]="categorys">
-            
-            <!-- <option value="selectCategory" disabled selected>Выберите категорию</option> -->
             <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
         </select><br>
-        <button type="submit" class="addBtn">+ Добавить свойство</button>
+        <button type="submit" class="addBtn" >+ Добавить свойство</button>
     </form>
 
 

@@ -18,6 +18,9 @@ export class BrendsComponent implements OnInit {
   constructor(private api: WebService) { }
 
   ngOnInit() {
+    this.getBrends();
+  }
+  getBrends(){
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
     })
@@ -59,9 +62,7 @@ export class BrendsComponent implements OnInit {
     this.api.creatingBrends(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
 
     setTimeout(() => {
-      this.api.getBrends().subscribe((res) => {
-        this.getBrendsArray = res as [];
-      })
+      this.getBrends();
     }, 500);
 
   }
@@ -72,9 +73,7 @@ export class BrendsComponent implements OnInit {
       this.api.deleteBrend(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     }
     setTimeout(() => {
-      this.api.getBrends().subscribe((res) => {
-        this.getBrendsArray = res as [];
-      })
+      this.getBrends();
     }, 500);
   }
 
