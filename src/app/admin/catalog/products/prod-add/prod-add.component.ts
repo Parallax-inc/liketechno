@@ -13,6 +13,7 @@ export class ProdAddComponent implements OnInit {
   fullDescriptionProd: string = "";
   getCategoryArray = [];
 
+  getBrendsArray = [];
   imgAddArray = [];
   fileToUpload: File = null;
 
@@ -20,6 +21,17 @@ export class ProdAddComponent implements OnInit {
   constructor(private api: WebService) { }
 
   ngOnInit() {
+    this.getBrends();
+    this.getCategory();
+  }
+
+  getBrends(){
+    this.api.getBrends().subscribe((res) => {
+      this.getBrendsArray = res as [];
+    })
+  }
+
+  getCategory(){
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
     })
