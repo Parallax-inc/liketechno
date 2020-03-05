@@ -53,7 +53,7 @@ export class WebService {
   }
 
   creatingProd(data: any) {
-    return this.webService.post('api/product', data)
+    return this.webService.post('api/goods/add', data)
   }
 
 

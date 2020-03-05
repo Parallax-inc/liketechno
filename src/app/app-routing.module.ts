@@ -9,7 +9,6 @@ import { MarketComponent } from './pages/market/market.component';
 import { ProductsComponent } from './admin/catalog/products/products.component';
 import { CategoryComponent } from './admin/catalog/category/category.component';
 import { BrendsComponent } from './admin/catalog/brends/brends.component';
-import { CategoryAddComponent } from './admin/catalog/category/category-add/category-add.component';
 import { CategoryEditComponent } from './admin/catalog/category/category-edit/category-edit.component';
 import { AccountComponent } from './pages/account/account.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
@@ -32,14 +31,12 @@ const routes: Routes = [
 
       { path: 'products', component: ProductsComponent, canActivate:[IsLoggedIn] },
       { path: 'category', component: CategoryComponent, canActivate:[IsLoggedIn] },
-      { path: 'category/add', component: CategoryAddComponent, canActivate:[IsLoggedIn] },
       { path: 'category/edit/:id', component: CategoryEditComponent, canActivate:[IsLoggedIn] },
       { path: 'brends', component: BrendsComponent, canActivate:[IsLoggedIn] },
       { path: 'products', component: ProductsComponent },
       { path: 'products/add', component: ProdAddComponent },
       { path: 'products/edit/:id', component: ProdEditComponent },
       { path: 'category', component: CategoryComponent },
-      { path: 'category/add', component: CategoryAddComponent },
       { path: 'category/edit/:id', component: CategoryEditComponent },
       { path: 'brends', component: BrendsComponent },
       { path: 'preference', component: PreferenceComponent },

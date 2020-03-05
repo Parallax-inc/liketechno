@@ -58,3 +58,20 @@
 .action{
     width: 20%;
 }
+
+form{
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 18px;
+    /* width: 500px; */
+}
+form>span{
+    margin-right: 25px;
+    font-size: 22px;
+}
+form>input{
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}

@@ -1,23 +1,11 @@
 <div class="container">
         <div class="container-header">
             <p>Категории - 0</p>
-            <div class="add" routerLink="/admin/category/add">+ Добавить категорию</div>
-            <div class="wrapper">
-                <div class="container-header">
-                    <p>Добавление категории</p>
-                </div>
-                <div class="container-admin-main">
-                    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-        
-                        <p>Название</p>
-                        <input type="text" #title="ngModel" name="title" [(ngModel)]="formData.title"
-                            class="form-control" placeholder="Type someting">
-        
-                        <button type="submit" class="btn btn-success">Додати</button>
-        
-                    </form>
-                </div>
-            </div>
+            <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                <span>Название:</span>
+                <input type="text" #title="ngModel" name="title" [(ngModel)]="formData.title">
+                <button type="submit" class="add">+ Добавить категорию</button>
+            </form>
         </div>
         <div class="container-admin-main">
             <div class="container-table">
