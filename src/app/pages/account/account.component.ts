@@ -13,7 +13,7 @@ export class AccountComponent implements OnInit {
   formData: any;
   login: string;
   userPass: string;
-  logined: boolean;
+
   constructor(private api: WebService, private authe: AuthService, private router: Router, private autorized: IsLoggedIn) { }
 
   ngOnInit() {
@@ -22,8 +22,7 @@ export class AccountComponent implements OnInit {
   }
 
   public auditLoginUser() {
-    this.logined = this.autorized.canActivate();
-    console.log(this.logined);
+    this.authe.logined = this.autorized.canActivate();
 
   }
 

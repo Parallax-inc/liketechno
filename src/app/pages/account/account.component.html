@@ -1,4 +1,4 @@
-<div *ngIf="!logined"  class="containerEnter">
+<div *ngIf="!authe.logined"  class="containerEnter">
     <div class="autherization">
         <p class="title">Авторизация</p>
         <form>
@@ -28,7 +28,7 @@
         </form>
     </div>
 </div>
-<div *ngIf="logined" class="userOffice" >
+<div *ngIf="authe.logined" class="userOffice" >
     <h2>Кабинет пользователя</h2>
     <div class="photo">
         <img src="assets/img/user.jpg" alt="">

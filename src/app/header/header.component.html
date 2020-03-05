@@ -4,8 +4,8 @@
         <div>
             <span>Контакты</span>
             <span class="stripVertical"></span>
-            <a *ngIf="logined"  routerLink="account" (click)='auditLoginUser()'><span>Мой кабинет</span></a>
-            <a *ngIf="!logined" routerLink="account" (click)='auditLoginUser()'><span>Войти в кабинет</span></a>
+            <a *ngIf="authe.logined"  routerLink="account" (click)='auditLoginUser()'><span>Мой кабинет</span></a>
+            <a *ngIf="!authe.logined" routerLink="account" (click)='auditLoginUser()'><span>Войти в кабинет</span></a>
         </div>
     </div>
     <div class="stripHorizontal"></div>

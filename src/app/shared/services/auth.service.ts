@@ -9,7 +9,7 @@ import { tokenNotExpired } from 'angular2-jwt'
 export class AuthService {
   token: any;
   usersarray: any;
-
+  logined: boolean;
   constructor(private http: Http) { }
 
   authUser(users){
