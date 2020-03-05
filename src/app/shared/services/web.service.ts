@@ -47,8 +47,9 @@ export class WebService {
     return this.webService.patch(`api/category/preference/creating/${name}`, data);
   }
 
-  deletePreference(id: string, name: string) {
+  deletePreference(id: string, data: any) {
     return this.webService.patch(`api/category/preference/delete/${id}`, name);
+    
   }
 
   creatingProd(data: any) {
