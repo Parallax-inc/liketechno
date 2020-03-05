@@ -1,4 +1,4 @@
-.container {
+.containerEnter {
     width: 1200px;
     /* min-height: 150px; */
     /* border: 1px solid lightgrey; */
@@ -37,8 +37,9 @@ input {
     padding: 5px 15px;
     font-size: 18px;
 }
-button{
-    background-color: #A3D133 ;
+
+button {
+    background-color: #A3D133;
     opacity: 0.7;
     font-size: 22px;
     color: whitesmoke;
@@ -48,7 +49,52 @@ button{
     margin-bottom: 25px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     opacity: 1;
     transition: 0.5s;
+}
+
+.userOffice {
+    width: 1200px;
+    margin: 0px auto;
+    padding: 25px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userOffice>h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.photo>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info{
+    margin-left: 25px;
+}
+td{
+    width: 300px;
+    font-size: 18px;
+}
+tr{
+    height: 40px;
+}
+table{
+    margin-bottom: 50px;
+}
+.exit{
+    background-color: grey;
+    margin-left: 50px;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="!logined"  class="containerEnter">
     <div class="autherization">
         <p class="title">Авторизация</p>
         <form>
@@ -26,5 +26,50 @@
 
             <button type="submit" class="btn btn-success">Регистрация</button>
         </form>
+    </div>
+</div>
+<div *ngIf="logined" class="userOffice" >
+    <h2>Кабинет пользователя</h2>
+    <div class="photo">
+        <img src="assets/img/user.jpg" alt="">
+    </div>
+    <div class="info">
+        <h3>Личные данные</h3>
+        <table>
+            <tr>
+                <td>ФИО:</td>
+                <td>Костив Роман</td>
+            </tr>
+            <tr>
+                <td>Електронная почта:</td>
+                <td>roman120487@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Адрес доставки:</td>
+                <td>г.Львов Новаяч почта 65</td>
+            </tr>
+            <tr>
+                <td>Язык общения:</td>
+                <td>Українська</td>
+            </tr>
+            <tr>
+                <td>Дата рождения:</td>
+                <td>12.04.1987</td>
+            </tr>
+            <tr>
+                <td>Пол:</td>
+                <td>Мужской</td>
+            </tr>
+            <tr>
+                <td>У меня есть ребенок:</td>
+                <td>Да</td>
+            </tr>
+            <tr>
+                <td>У меня есть автомобиль:</td>
+                <td>да</td>
+            </tr>
+        </table>
+        <button>Редактировать личные данные</button>
+        <button class="exit" (click)="exitAccount()">Выйти</button>
     </div>
 </div>

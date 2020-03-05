@@ -30,6 +30,7 @@ import { PreferenceComponent } from './admin/catalog/preference/preference.compo
 import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
 import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,7 @@ import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.
     AccountComponent,
     PreferenceComponent,
     ProdAddComponent,
-    ProdEditComponent
+    ProdEditComponent,
   ],
   imports: [
     BrowserModule,
