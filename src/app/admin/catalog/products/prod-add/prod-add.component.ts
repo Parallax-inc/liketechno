@@ -83,4 +83,9 @@ export class ProdAddComponent implements OnInit {
     // }, 500);
 
   }
+
+  public createArrayPreference(cat) {
+    console.log(cat);
+
+  }
 }
