@@ -48,7 +48,7 @@ export class WebService {
   }
 
   deletePreference(id: string, data: any) {
-    return this.webService.patch(`api/category/preference/delete/${id}`, name);
+    return this.webService.patch(`api/category/preference/delete/${id}`, data);
     
   }
 
