@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IsLoggedIn } from '../auth/isLogged.guard';
+import { AccountComponent } from '../pages/account/account.component';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   hideMenu: boolean = false;
-  constructor() { }
+
+
+  constructor(private autorized: IsLoggedIn, private authe: AuthService) { }
 
   ngOnInit() {
+
   }
-  showMenu() {
-    if (this.hideMenu) {
-      this.hideMenu = false;
-    } else {
-      this.hideMenu = true;
-    }
+
+showMenu() {
+  if (this.hideMenu) {
+    this.hideMenu = false;
+  } else {
+    this.hideMenu = true;
   }
+}
 }
