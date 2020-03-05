@@ -21,8 +21,6 @@ export class PreferenceComponent implements OnInit {
   getCategory() {
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
-      console.log(this.getCategoryArray);
-
     })
   }
 
@@ -34,7 +32,7 @@ export class PreferenceComponent implements OnInit {
   //   console.log(this.idCategory);
 
   // }
-  
+
   public resetForm() {
     this.namePreference = "";
     this.categorys = "";
@@ -42,19 +40,23 @@ export class PreferenceComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    // data['_idCategory']=`${this.idCategory}`;
-    console.log(data);
-
     this.api.creatingPreference(this.categorys, data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     this.resetForm();
     delete data.id;
+    setTimeout(() => {
+      this.getCategory();
+    }, 500);
   }
 
   deletePreference(id, name) {
-    const data = {preference:name }
+    const data = { preference: name }
     let delYes = confirm('Вы действительно хотите удалить свойство?');
     if (delYes) {
       this.api.deletePreference(id, data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     }
+    setTimeout(() => {
+      this.getCategory();
+    }, 500);
+
   }
 }

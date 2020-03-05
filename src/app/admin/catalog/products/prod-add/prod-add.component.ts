@@ -34,6 +34,18 @@ export class ProdAddComponent implements OnInit {
     this.getCategory();
   }
 
+  public createArrayPreference(cat) {
+    console.log(cat);
+    console.log(this.getCategoryArray);
+    
+    this.preferenceArray = this.getCategoryArray.filter((elem)=>{
+      return elem.title == cat;
+    })
+    this.preferenceArray = this.preferenceArray[0].arrayPreference;
+    console.log(this.preferenceArray);
+    
+
+  }
   getBrends() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
@@ -84,8 +96,5 @@ export class ProdAddComponent implements OnInit {
 
   }
 
-  public createArrayPreference(cat) {
-    console.log(cat);
-
-  }
+  
 }

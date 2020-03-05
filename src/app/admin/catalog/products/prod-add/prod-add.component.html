@@ -26,24 +26,10 @@
         <input type="number" placeholder="количество..." [(ngModel)]="quantity" name="quantity">
         <div class="preference">
             <h3>Свойства товара</h3>
-            <span>
-                <p> Вес</p><input type="text" name="" id="">
+            <span *ngFor="let item of preferenceArray" >
+                <p> {{item.perference}}</p><input type="text" name="" id="">
             </span>
-            <span>
-                <p> Материал</p><input type="text" name="" id="">
-            </span>
-            <span>
-                <p>Ширина</p><input type="text" name="" id="">
-            </span>
-            <span>
-                <p> Высота</p><input type="text" name="" id="">
-            </span>
-            <span>
-                <p>Длинна</p><input type="text" name="" id="">
-            </span>
-            <span>
-                <p>Хрень</p><input type="text" name="" id="">
-            </span>
+            
         </div>
         <div class="description">
             <h3>Описание товара</h3>
