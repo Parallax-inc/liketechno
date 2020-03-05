@@ -51,7 +51,7 @@ export class PreferenceComponent implements OnInit {
   }
 
   deletePreference(id, name) {
-    const data = {'preference':name }
+    const data = {preference:name }
     let delYes = confirm('Вы действительно хотите удалить свойство?');
     if (delYes) {
       this.api.deletePreference(id, data).subscribe((res: any) => { }, (err: any) => { console.log(err); })

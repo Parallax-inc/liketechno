@@ -15,7 +15,7 @@
 
         </div>
 
-        <select name="categoryes" id="" [(ngModel)]="categoryes" change>
+        <select name="categoryes" id="" [(ngModel)]="categoryes" (change)="createArrayPreference($event.target.value)">
             <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
         </select>
         <select name="nameBrend" id="" [(ngModel)]="nameBrend">
