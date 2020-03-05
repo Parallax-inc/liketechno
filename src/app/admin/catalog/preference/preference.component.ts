@@ -50,10 +50,12 @@ export class PreferenceComponent implements OnInit {
     delete data.id;
   }
 
-  deletePreference(id) {
+  deletePreference(id, name) {
+    console.log(id, name);
+    
     let delYes = confirm('Вы действительно хотите удалить?');
     if (delYes) {
-      this.api.deletePreference(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+      this.api.deletePreference(id, name).subscribe((res: any) => { }, (err: any) => { console.log(err); })
     }
   }
 }

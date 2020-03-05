@@ -4,33 +4,25 @@
     </div>
     <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
 
-        <input type="text" name="namePreference" [(ngModel)]="namePreference" placeholder="Введите название свойства...">
+        <input type="text" name="namePreference" [(ngModel)]="namePreference"
+            placeholder="Введите название свойства...">
         <br>
         <p>Выберите категорию:</p>
         <select name="categorys" id="" [(ngModel)]="categorys">
             <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
         </select><br>
-        <button type="submit" class="addBtn" >+ Добавить свойство</button>
+        <button type="submit" class="addBtn">+ Добавить свойство</button>
     </form>
 
-
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Категория</th>
-                <th scope="col">Свойство</th>
-                <th scope="col">Действия</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of getBrendsArray; let i = index">
-                <th scope="row">{{i+1}}</th>
-                <td>{{item.category}}</td>
-                <td>{{item.nameBrends}}</td>
-                <td><button id="deleteBtn" (click)="deletePreference(item._id)">delete</button> </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="renderInfo">
+        <h3>Таблица свйоств</h3>
+        <div class="category" *ngFor="let item of getCategoryArray">
+            <h3>{{item.title}}</h3>
+            <ul>
+                <li *ngFor="let pref of item.arrayPreference">{{pref.perference}} <button class="deleteBtn"
+                        (click)="deletePreference(item._id, pref.perference)">X</button></li>
+            </ul>
+        </div>
+    </div>
 
 </div>
