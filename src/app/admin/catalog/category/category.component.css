@@ -75,3 +75,28 @@ form>input{
     border: 1px solid lightgrey;
     border-radius: 5px;
 }
+
+.table{
+    width: 50%;
+    margin-top: 25px;
+}
+.thead-dark{
+    background-color: #2B303B;
+    color: whitesmoke;
+    font-size: 18px;
+}
+tr{
+    height: 40px;
+}
+td{
+    /* height: 40px; */
+    padding-left: 10px;
+    text-align: left;
+}
+table button{
+    padding: 5px;
+    font-size: 18px;
+    border: 1px sol lightgrey;
+    border-radius: 5px;
+    margin-left: 25px;
+}

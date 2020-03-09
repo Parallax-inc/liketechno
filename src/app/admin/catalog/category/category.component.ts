@@ -42,4 +42,9 @@ export class CategoryComponent implements OnInit {
     }, 500);
 
   }
+
+  deleteCategory(name){
+    console.log(name);
+    
+  }
 }
