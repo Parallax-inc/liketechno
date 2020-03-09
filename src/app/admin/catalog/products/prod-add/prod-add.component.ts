@@ -95,7 +95,11 @@ export class ProdAddComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    data['images'] = this.arrayImgFiles;
+    // debugger
+    for (let img of this.arrayImgFiles) {
+      data.append('images', img)
+    }
+    // data['images'] = this.arrayImgFiles;
     this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
 
 

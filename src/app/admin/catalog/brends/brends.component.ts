@@ -64,6 +64,8 @@ export class BrendsComponent implements OnInit {
     setTimeout(() => {
       this.getBrends();
     }, 500);
+    console.log(data);
+    
 
   }
 

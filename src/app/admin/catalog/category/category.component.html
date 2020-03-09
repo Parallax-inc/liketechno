@@ -1,27 +1,30 @@
 <div class="container">
-        <div class="container-header">
-            <p>Категории - 0</p>
-            <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-                <span>Название:</span>
-                <input type="text" #title="ngModel" name="title" [(ngModel)]="formData.title">
-                <button type="submit" class="add">+ Добавить категорию</button>
-            </form>
-        </div>
-        <div class="container-admin-main">
-            <div class="container-table">
-                <div class="table-info">
-                    <input type="checkbox" name="" id="" class="input">
-                    <p class="name">НАЗВАНИЕ</p>
-                    <p class="action">ДЕЙСТВИЯ</p>
-                </div>
-                <div class="table-render">
-                    <div *ngFor="let item of getCategoryArray; let i=index" [routerLink]="[ '/admin/category/edit', item._id ]" class="render">
-                        <input type="checkbox" name="" id="" class="input">
-                        <p class="name">{{item.title}}</p>
-                        <i class="action fas fa-trash"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+    <div class="container-header">
+        <p>Категории - 0</p>
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <span>Название:</span>
+            <input type="text" #title="ngModel" name="title" [(ngModel)]="formData.title">
+            <button type="submit" class="add">+ Добавить категорию</button>
+        </form>
+    </div>
 
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of getCategoryArray; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.title}}</td>
+                <td>
+                    <button id="deleteBtn" (click)="deleteCategory(item.title)">Delete</button>
+                    <button id="editBtn" (click)="EditCategory(item.title)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
