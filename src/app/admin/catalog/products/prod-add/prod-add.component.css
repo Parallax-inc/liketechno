@@ -17,6 +17,9 @@ input[type='text'] {
     margin-right: 25px;
     font-weight: normal;
 }
+#theBest, #newer{
+    margin-left: 125px;
+}
 
 .imageAdd {
     width: 100%;

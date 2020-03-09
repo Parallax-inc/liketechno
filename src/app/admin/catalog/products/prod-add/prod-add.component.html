@@ -2,7 +2,7 @@
     <h1>Добавление товара</h1>
     <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
         <input type="text" name="nameProd" placeholder="Введите название товара..." [(ngModel)]="nameProd"><br>
-        <input type="checkbox" [(ngModel)]="recomend" name="recomend" id="recomend"><span> Добавить товар в "Рекомендуємые"</span>
+        <input type="checkbox" [(ngModel)]="recomend" name="recomend" id="recomend"><span> Рекомендуємые</span>
         <input type="checkbox" [(ngModel)]="theBest" name="theBest" id="theBest"><span> Хит продаж</span>
         <input type="checkbox" [(ngModel)]="newer" name="newer" id="newer"><span> Новинка</span>
         <div class="imageAdd">
