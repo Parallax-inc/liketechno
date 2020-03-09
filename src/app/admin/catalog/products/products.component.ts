@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
   getProduct(){
     this.api.getProduct().subscribe((res) => {
       this.getProductArray = res as [];
-      // console.log(this.getCategoryArray);
+      console.log(this.getProductArray);
     })
   }
 
