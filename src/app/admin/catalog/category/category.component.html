@@ -21,8 +21,8 @@
                 <th scope="row">{{i+1}}</th>
                 <td>{{item.title}}</td>
                 <td class="action">
-                    <button id="deleteBtn" (click)="deleteCategory(item.title)">Delete</button>
-                    <button id="editBtn" (click)="EditCategory(item.title)">Edit</button>
+                    <button id="deleteBtn" (click)="deleteCategory(item._id)">Delete</button>
+                    <button id="editBtn" (click)="EditCategory(item._id)">Edit</button>
                 </td>
             </tr>
         </tbody>
