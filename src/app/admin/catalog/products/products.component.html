@@ -8,7 +8,7 @@
     </div>
     <div class="filtr">
         <form action="">
-            <select name="" id="">
+            <select name="">
                 <option value="all_prod" selected>Все товары</option>
                 <option value="hits">Хиты продаж</option>
                 <option value="for_sale">Со скидкой</option>
@@ -17,15 +17,15 @@
                 <option value="is_absent">Отсутствующие</option>
                 <option value="no_image">Без изображения</option>
             </select>
-            <select name="categorys" id="">
+            <select name="categorys">
                 <option value="" selected>Все категории</option>
                 <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
             </select>
-            <select name="brends" id="">
+            <select name="brends">
                 <option value="" selected>Все бренды</option>
                 <option *ngFor="let item of getCategoryArray" value="{{item.title}}">{{item.title}}</option>
             </select>
-            <select name="quantity_show" id="">
+            <select name="quantity_show">
                 <option value="5">показать по: 5</option>
                 <option value="10">показать по: 10</option>
                 <option value="25" selected>показать по: 25</option>

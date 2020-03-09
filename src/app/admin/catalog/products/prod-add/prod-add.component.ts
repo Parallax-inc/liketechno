@@ -15,6 +15,10 @@ export class ProdAddComponent implements OnInit {
   getCategoryArray = [];
   preferenceArray = [];
   recomend: boolean = false;
+  theBest: boolean = false;
+  newer: boolean = false;
+
+  arrayImgFiles = [];
 
   getBrendsArray = [];
   imgAddArray = [];
@@ -37,20 +41,20 @@ export class ProdAddComponent implements OnInit {
   public createArrayPreference(cat) {
     console.log(cat);
     console.log(this.getCategoryArray);
-    
-    this.preferenceArray = this.getCategoryArray.filter((elem)=>{
+
+    this.preferenceArray = this.getCategoryArray.filter((elem) => {
       return elem.title == cat;
     })
     this.preferenceArray = this.preferenceArray[0].arrayPreference;
-    console.log(this.preferenceArray);
-    
+    // console.log(this.preferenceArray);
+
 
   }
   getBrends() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
     })
-    console.log(this.getBrendsArray);
+    // console.log(this.getBrendsArray);
 
   }
 
@@ -62,7 +66,13 @@ export class ProdAddComponent implements OnInit {
 
   }
 
+  addImgToArrayToPost(files) {
+    for (let img of files) {
+      this.arrayImgFiles.push(img)
+    }
+  }
   preview(files) {
+    this.addImgToArrayToPost(files);
     if (files.length === 0)
       return;
     for (let i = 0; i < files.length; i++) {
@@ -85,8 +95,7 @@ export class ProdAddComponent implements OnInit {
 
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    // data['images'] = this.imgAddArray;
-    data.append('images',this.imgAddArray )
+    data['images'] = this.arrayImgFiles;
     this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
 
 
@@ -97,5 +106,5 @@ export class ProdAddComponent implements OnInit {
 
   }
 
-  
+
 }
