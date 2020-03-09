@@ -14,6 +14,7 @@ export class ProdAddComponent implements OnInit {
   fullDescriptionProd: string = "";
   getCategoryArray = [];
   preferenceArray = [];
+  preferenceToSend = [];
   recomend: boolean = false;
   theBest: boolean = false;
   newer: boolean = false;
@@ -39,22 +40,23 @@ export class ProdAddComponent implements OnInit {
   }
 
   public createArrayPreference(cat) {
-    console.log(cat);
-    console.log(this.getCategoryArray);
-
     this.preferenceArray = this.getCategoryArray.filter((elem) => {
       return elem.title == cat;
     })
     this.preferenceArray = this.preferenceArray[0].arrayPreference;
-    // console.log(this.preferenceArray);
+    console.log(this.preferenceArray);
 
+
+  }
+  addPdeferenceToObject(name, value) {
+    this.preferenceToSend.push(`${name}, ${value}`)
+    console.log(this.preferenceToSend);
 
   }
   getBrends() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
     })
-    // console.log(this.getBrendsArray);
 
   }
 
@@ -93,20 +95,32 @@ export class ProdAddComponent implements OnInit {
 
 
 
-  public onSubmit(form: NgForm) {
-    const data = Object.assign({}, form.value);
-    // debugger
+  public onSubmit() {
+    const data = new FormData();
+    data.append('nameProd', this.nameProd);
+    data.append('recomend', JSON.stringify(this.recomend));
+    data.append('theBest', JSON.stringify(this.theBest));
+    data.append('newer', JSON.stringify(this.newer));
+    data.append('categoryes', this.categoryes);
+    data.append('nameBrend', this.nameBrend);
+    data.append('price', JSON.stringify(this.price));
+    data.append('quantity', JSON.stringify(this.quantity));
+    for(let pref of this.preferenceToSend){
+      data.append('preferences', pref)
+    }
+
     for (let img of this.arrayImgFiles) {
       data.append('images', img)
     }
-    // data['images'] = this.arrayImgFiles;
+
     this.api.creatingProd(data).subscribe((res: any) => { }, (err: any) => { console.log(err); })
 
 
-    console.log(data);
+    // console.log(data);
     // setTimeout(() => {
     //   this.getBrends();
     // }, 500);
+
 
   }
 

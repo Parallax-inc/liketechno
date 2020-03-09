@@ -1,6 +1,6 @@
 <div class="containerProdAdd">
     <h1>Добавление товара</h1>
-    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <form autocomplete="off">
         <input type="text" name="nameProd" placeholder="Введите название товара..." [(ngModel)]="nameProd"><br>
         <input type="checkbox" [(ngModel)]="recomend" name="recomend" id="recomend"><span> Рекомендуємые</span>
         <input type="checkbox" [(ngModel)]="theBest" name="theBest" id="theBest"><span> Хит продаж</span>
@@ -28,8 +28,8 @@
         <input type="number" placeholder="количество..." [(ngModel)]="quantity" name="quantity">
         <div class="preference">
             <h3>Свойства товара</h3>
-            <span *ngFor="let item of preferenceArray" >
-                <p> {{item.perference}}</p><input type="text" name="" id="">
+            <span *ngFor="let item of preferenceArray; let i = index" >
+                <p> {{item.perference}}</p><input type="text" name="{{item.perference}}" (change)="addPdeferenceToObject(item.perference, $event.target.value)">
             </span>
             
         </div>
@@ -40,7 +40,7 @@
             <p>Полное описание:</p>
             <ckeditor [editor]="Editor" [(ngModel)]="fullDescriptionProd" name="fullDescriptionProd"></ckeditor>
         </div>
-        <button class="addBtn" type="submit">+ Добавить товар</button>
+        <button class="addBtn" (click)="onSubmit()" >+ Добавить товар</button>
     </form>
 
     
