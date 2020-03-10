@@ -1,10 +1,10 @@
-<div *ngIf="!authe.logined"  class="containerEnter">
+<div *ngIf="!authe.logined" class="containerEnter">
+
     <div class="autherization">
         <p class="title">Авторизация</p>
         <form>
             <p>Email:</p>
-            <input type="text" [(ngModel)]="login" name="login" class="form-control"
-                placeholder="введите email...">
+            <input type="text" [(ngModel)]="login" name="login" class="form-control" placeholder="введите email...">
             <p>Введите пароль:</p>
             <input type="text" [(ngModel)]="userPass" name="userPass" class="form-control"
                 placeholder="введите пароль...">
@@ -28,8 +28,9 @@
         </form>
     </div>
 </div>
-<div *ngIf="authe.logined" class="userOffice" >
+<div *ngIf="authe.logined" class="userOffice">
     <h2>Кабинет пользователя</h2>
+    
     <div class="photo">
         <img src="assets/img/user.jpg" alt="">
     </div>
@@ -71,5 +72,6 @@
         </table>
         <button>Редактировать личные данные</button>
         <button class="exit" (click)="exitAccount()">Выйти</button>
+        <a routerLink="/admin"><button>Адмінка</button></a>
     </div>
 </div>

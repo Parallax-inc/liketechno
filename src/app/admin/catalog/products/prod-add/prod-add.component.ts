@@ -49,8 +49,9 @@ export class ProdAddComponent implements OnInit {
 
   }
   addPdeferenceToObject(name, value) {
-    if(value !== ''){
-      this.preferenceToSend[`${name}`] = value;
+    this.preferenceToSend[`${name}`] = value;
+    for(let key in this.preferenceToSend){
+        this.preferenceToSend[`${name}`] = value;
     }
     console.log(this.preferenceToSend);
 
@@ -108,15 +109,12 @@ export class ProdAddComponent implements OnInit {
     data.append('nameBrend', this.nameBrend);
     data.append('price', JSON.stringify(this.price));
     data.append('quantity', JSON.stringify(this.quantity));
-    data.append('preference', JSON.stringify(this.preferenceToSend));
-    // data.append('preference', this.preferenceToSend)
-    // const preferences = []
-    // for(let key in this.preferenceToSend){
-    //   data.append(`${key}`, this.preferenceToSend[key])
-    // }
-    // data.append('preferences', dataPref)
-    // data.append('preference', this.preferenceToSend)
-
+    // data.append('preference', JSON.stringify(this.preferenceToSend));
+    for(let pref in this.preferenceToSend){
+      if(this.preferenceToSend[pref] != ''){
+        data.append('preference', JSON.stringify(pref));
+      }
+    }
     for (let img of this.arrayImgFiles) {
       data.append('images', img)
     }
