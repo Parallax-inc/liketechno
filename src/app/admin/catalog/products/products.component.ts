@@ -9,6 +9,7 @@ import { WebService } from 'src/app/shared/services/web.service';
 export class ProductsComponent implements OnInit {
   getCategoryArray = [];
   getProductArray = [];
+  quantity: number;
   constructor(private api: WebService) { }
 
   ngOnInit() {
@@ -26,6 +27,7 @@ export class ProductsComponent implements OnInit {
     this.api.getProduct().subscribe((res) => {
       this.getProductArray = res as [];
       console.log(this.getProductArray);
+      this.quantity = this.getProductArray.length;
     })
   }
 

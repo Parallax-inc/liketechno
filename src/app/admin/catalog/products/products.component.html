@@ -1,6 +1,6 @@
 <div class="adminProdContainer">
     <div class="header">
-        <h2>Товары - 15</h2>
+        <h2>Товары - {{quantity}}</h2>
         <div class="addBtn" routerLink="/admin/products/add">+ Добавить товар</div>
         <div class="search">
             <input type="search" name="" id="" placeholder="поиск товара...">
@@ -47,12 +47,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="/assets/img/DELL-vostro-3330.jpg" alt=""></td>
-                <td>Dell Wostro 3300</td>
-                <td>5000 грн</td>
-                <td>1 шт</td>
+            <tr *ngFor="let item of getProductArray; let i = index" >
+                <th scope="row">{{i+1}}</th>
+                <td><img src="{{item.images[0].path}}" alt=""></td>
+                <td>{{item.nameProd}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
                 <td>включено</td>
                 <td>delete/edit</td>
             </tr>
