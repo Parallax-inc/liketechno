@@ -23,6 +23,9 @@ export class WebService {
   updateCategoryByID(id: string, response: string) {
     return this.webService.patch(`api/category/edit-update/${id}`, response );
   }
+  deleteCategory(id: string){
+    return this.webService.delete(`api/category/delete/${id}`);
+  }
 
   // account
   creatingUsers(data: string) {

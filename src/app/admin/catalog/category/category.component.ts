@@ -43,8 +43,13 @@ export class CategoryComponent implements OnInit {
 
   }
 
-  deleteCategory(name){
-    console.log(name);
-    
+  deleteCategory(id) {
+    let delYes = confirm('Вы действительно хотите удалить?');
+    if (delYes) {
+      this.api.deleteCategory(id).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+    }
+    setTimeout(() => {
+      this.getCategory();
+    }, 500);
   }
 }

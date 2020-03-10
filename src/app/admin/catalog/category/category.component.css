@@ -96,12 +96,23 @@ td{
 .action{
     /* text-align: center; */
     width: 300px;
+    height: 50px;
 }
 table button{
     /* display: block; */
     padding: 5px;
-    font-size: 18px;
+    font-size: 16px;
     border: 1px sol lightgrey;
     border-radius: 5px;
     margin: 0px 20px;
+    outline: none;
+    cursor: pointer;
+}
+#deleteBtn{
+    background-color: #DC3545;
+    color: whitesmoke;
+}
+#editBtn{
+    background-color: #FFC107;
+    color: black;
 }
