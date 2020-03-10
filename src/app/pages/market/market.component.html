@@ -21,5 +21,16 @@
             </ul>
         </div>
     </div>
-    <div class="main"></div>
+    <div class="main">
+        <div class="product" *ngFor="let item of getProductArray" >
+            
+            <div class="firstimgProd">
+                <img src="{{item.images[0].path}}" alt="">
+            </div>
+            <p class="titleProd">{{item.nameProd}}</p>
+            <p class="brandName">Бренд: {{item.nameBrend}}</p>
+            <p class="price">{{item.price}} грн.</p>
+
+        </div>
+    </div>
 </div>

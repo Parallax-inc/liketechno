@@ -9,25 +9,32 @@ import { WebService } from 'src/app/shared/services/web.service';
 export class MarketComponent implements OnInit {
   getBrendsArray = [];
   getCategoryArray = [];
+  getProductArray = [];
   constructor(private api: WebService) { }
  
   ngOnInit() {
     this.getBrends();
     this.getCategory();
+    this.getProduct();
   }
 
 
   getBrends() {
     this.api.getBrends().subscribe((res) => {
       this.getBrendsArray = res as [];
-      console.log(this.getBrendsArray);
     })
   }
 
   getCategory(){
     this.api.getCategory().subscribe((res) => {
       this.getCategoryArray = res as [];
-      console.log(this.getCategoryArray);
+    })
+  }
+
+  getProduct(){
+    this.api.getProduct().subscribe((res) => {
+      this.getProductArray = res as [];
+      console.log(this.getProductArray);
     })
   }
 }
