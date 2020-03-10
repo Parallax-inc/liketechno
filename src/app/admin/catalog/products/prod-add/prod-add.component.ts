@@ -112,7 +112,7 @@ export class ProdAddComponent implements OnInit {
     // data.append('preference', JSON.stringify(this.preferenceToSend));
     for(let pref in this.preferenceToSend){
       if(this.preferenceToSend[pref] != ''){
-        data.append('preference', JSON.stringify(pref));
+        data.append('preference', `${pref}, ${this.preferenceToSend[pref]}`);
       }
     }
     for (let img of this.arrayImgFiles) {
