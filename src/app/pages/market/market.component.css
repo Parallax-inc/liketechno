@@ -16,32 +16,37 @@
 
 .main {
     width: 78%;
-    min-height: 1500px;
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1em;
+    grid-column-gap: 5px;
+    grid-template-rows: repeat(auto-fit, 350px);
+    justify-items: center;
     align-content: flex-start;
-    /* align-items: flex-start; */
-    /* justify-content: flex-start; */
-    /* justify-content: stretch; */
+    margin-bottom: 200px;
 }
+
 /* --------------product-------- */
+
 .product {
-    width: 220px;
-    height: 300px;
-    margin: 15px 7px;
-    border: 1px solid lightgrey;
+    padding: 5px;
     overflow: hidden;
     cursor: pointer;
-    transform-origin: center top;
     background-color: white;
-    
+    position: relative;
 }
-.product:hover{
-    /* transform:scale(1.1); */
-    transition: 0.1s;
-    height: 450px;
+
+.product:hover {
+    transition: 0.2s;
+    height: 550px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.product:hover .details {
+    transition: 0.5s;
+    background-color: #A3D133;
 }
 
 .firstimgProd {
@@ -52,22 +57,67 @@
 
 .firstimgProd img {
     width: 100%;
-    /* height: 100%; */
-    /* object-fit: cover; */
 }
-.titleProd{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;  
+.category{
+    font-size: 14px;
+    opacity: 0.5;
 }
-.product p{
+.titleProd {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0062BD;
+}
+
+.product p {
     margin: 10px;
 }
-.price{
+
+.price {
     font-size: 25px;
     color: #F84147;
 }
+
+.details {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid #A3D133; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    top: 280px;
+    /* z-index: 5; */
+}
+
+.altDetails {
+    opacity: 0.1;
+    position: absolute;
+    right: 15px;
+    top: 245px;
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.details>img:hover .altDetails{
+    opacity: 1;
+    transition: 0.5s;
+    /* z-index: 5; */
+}
+
+.details img {
+    width: 80%;
+    height: 80%;
+}
+.compare {}
+
 /* ------------------------- */
+
 .filtpPart {
     min-height: 50px;
     margin-top: 25px;

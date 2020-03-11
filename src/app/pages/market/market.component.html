@@ -23,14 +23,16 @@
     </div>
     <div class="main">
         <div class="product" *ngFor="let item of getProductArray" >
-            
+            <p class="category">{{item.categoryes}}</p>
             <div class="firstimgProd">
                 <img src="{{item.images[0].path}}" alt="">
             </div>
             <p class="titleProd">{{item.nameProd}}</p>
             <p class="brandName">Бренд: {{item.nameBrend}}</p>
             <p class="price">{{item.price}} грн.</p>
-
+            <p class="compare">Добавить к сравнению</p>
+            <div class="details"><img src="assets/icons/arrow.svg" alt=""></div>
+            <span class="altDetails">Подробнее</span>
         </div>
     </div>
 </div>
