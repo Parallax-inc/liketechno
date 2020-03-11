@@ -15,6 +15,7 @@ import { IsLoggedIn } from './auth/isLogged.guard';
 import { PreferenceComponent } from './admin/catalog/preference/preference.component';
 import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
 import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
+import { ProdDetailsComponent } from './pages/prod-details/prod-details.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'details', component: ProdDetailsComponent },
   {
     path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },

@@ -28,6 +28,7 @@ import { AuthService } from './shared/services/auth.service'
 import { PreferenceComponent } from './admin/catalog/preference/preference.component';
 import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
 import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
+import { ProdDetailsComponent } from './pages/prod-details/prod-details.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.
     PreferenceComponent,
     ProdAddComponent,
     ProdEditComponent,
+    ProdDetailsComponent,
   ],
   imports: [
     BrowserModule,

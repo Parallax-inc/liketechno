@@ -3,13 +3,13 @@
         <div class="filtpPart" id="brends">
             <p>Бренды</p>
             <ul>
-                <li *ngFor="let item of getBrendsArray" ><input type="checkbox" name="" id="">{{item.nameBrends}}</li>
+                <li *ngFor="let item of getBrendsArray"><input type="checkbox" name="" id="">{{item.nameBrends}}</li>
             </ul>
         </div>
         <div class="filtpPart" id="categories">
             <p>Категории</p>
             <ul>
-                <li *ngFor="let item of getCategoryArray" ><input type="checkbox" name="" id="">{{item.title}}</li>
+                <li *ngFor="let item of getCategoryArray"><input type="checkbox" name="" id="">{{item.title}}</li>
             </ul>
         </div>
         <div class="filtpPart" id="preferences">
@@ -22,17 +22,19 @@
         </div>
     </div>
     <div class="main">
-        <div class="product" *ngFor="let item of getProductArray" >
-            <p class="category">{{item.categoryes}}</p>
-            <div class="firstimgProd">
-                <img src="{{item.images[0].path}}" alt="">
+        <!-- <a routerLink='/details'> -->
+            <div class="product" *ngFor="let item of getProductArray" routerLink='/details'>
+                <p class="category">{{item.categoryes}}</p>
+                <div class="firstimgProd">
+                    <img src="{{item.images[0].path}}" alt="">
+                </div>
+                <p class="titleProd">{{item.nameProd}}</p>
+                <p class="brandName">Бренд: {{item.nameBrend}}</p>
+                <p class="price">{{item.price}} грн.</p>
+                <p class="compare">Добавить к сравнению</p>
+                <div class="details"><img src="assets/icons/arrow.svg" alt=""></div>
+                <span class="altDetails">Подробнее</span>
             </div>
-            <p class="titleProd">{{item.nameProd}}</p>
-            <p class="brandName">Бренд: {{item.nameBrend}}</p>
-            <p class="price">{{item.price}} грн.</p>
-            <p class="compare">Добавить к сравнению</p>
-            <div class="details"><img src="assets/icons/arrow.svg" alt=""></div>
-            <span class="altDetails">Подробнее</span>
-        </div>
+        <!-- </a> -->
     </div>
 </div>
