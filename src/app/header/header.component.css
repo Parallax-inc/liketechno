@@ -99,7 +99,9 @@ menu>a {
     display: flex;
     justify-content: space-between;
 }
-
+.hideMenu{
+    display: none;
+}
 .menuVertical li {
     font-size: 16px;
     list-style-type: none;
