@@ -21,7 +21,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 1em;
     grid-column-gap: 5px;
-    grid-template-rows: repeat(auto-fit, 350px);
+    grid-template-rows: repeat(auto-fill, 350px);
     justify-items: center;
     align-content: flex-start;
     margin-bottom: 200px;
@@ -32,7 +32,6 @@
 .product {
     padding: 5px;
     overflow: hidden;
-    cursor: pointer;
     background-color: white;
     position: relative;
 }
@@ -40,14 +39,13 @@
 .product:hover {
     transition: 0.2s;
     height: 550px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    /* border: 1px solid lightgrey; */
+    box-shadow: 0 0 20px rgba(65, 46, 46, 0.4);
     z-index: 2;
 }
 
-.product:hover .details {
-    transition: 0.5s;
-    background-color: #A3D133;
-}
+
 
 .firstimgProd {
     width: 100%;
@@ -79,8 +77,8 @@
 
 .details {
     background-color: rgba(0, 0, 0, 0.2);
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     /* border: 1px solid #A3D133; */
     border-radius: 50%;
     display: flex;
@@ -89,11 +87,20 @@
     position: absolute;
     right: 15px;
     top: 280px;
+    cursor: pointer;
     /* z-index: 5; */
+}
+.details:hover{
+    transition: 0.5s;
+    background-color: #A3D133;
+}
+.details:hover + .altDetails{
+    opacity: 1;
+    transition: 0.3s;
 }
 
 .altDetails {
-    opacity: 0.1;
+    opacity: 0;
     position: absolute;
     right: 15px;
     top: 245px;
@@ -101,20 +108,34 @@
     color: white;
     padding: 5px;
     border-radius: 5px;
-    
 }
 
-.details>img:hover .altDetails{
-    opacity: 1;
-    transition: 0.5s;
-    /* z-index: 5; */
-}
 
 .details img {
     width: 80%;
     height: 80%;
 }
-.compare {}
+.compare {
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 25px;
+}
+.compare img{
+    width: 20px;
+    height: 20px;
+}
+.fichi{
+    width: 220px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.fichi img{
+    width: 50px;
+    margin-top: 10px;
+    /* margin: 8px; */
+}
 
 /* ------------------------- */
 
