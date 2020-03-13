@@ -13,6 +13,5 @@ export class HeaderComponent implements OnInit {
   constructor(private autorized: IsLoggedIn, private authe: AuthService) { }
 
   ngOnInit() {
-
   }
 }
