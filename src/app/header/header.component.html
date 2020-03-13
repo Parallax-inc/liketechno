@@ -1,22 +1,51 @@
 <div class="headerContainer">
     <div class="topmain">
-        <p>Интернет магазин Liketechno</p>
+        <p class="styleP">Интернет магазин Liketechno</p>
         <div>
-            <span>Контакты</span>
-            <span class="stripVertical"></span>
-            <a *ngIf="authe.logined"  routerLink="account" (click)='auditLoginUser()'><span>Мой кабинет</span></a>
-            <a *ngIf="!authe.logined" routerLink="account" (click)='auditLoginUser()'><span>Войти в кабинет</span></a>
+            <ul class="ulList">
+                <li>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Контакты</a>
+                </li>
+                <li>
+                    <a href="#"> <i class="fab fa-shopify"></i> Магазин</a>
+                </li>
+                <li>
+                    <a href="#"><i class="far fa-user"></i> Мой аккаунт</a>
+                </li>
+            </ul>
+            <!-- <a *ngIf="authe.logined"  routerLink="account" (click)='auditLoginUser()'><span>Мой кабинет</span></a>
+            <a *ngIf="!authe.logined" routerLink="account" (click)='auditLoginUser()'><span>Войти в кабинет</span></a> -->
         </div>
     </div>
     <div class="stripHorizontal"></div>
-    <a routerLink="main"><div class="logo"></div></a>
-    <div class="search"></div>
-    <div class="bascet"></div>
+    <div class="container-main">
+        <div class="logoCtn">
+
+            <a routerLink="main">
+                <div class="logo"></div>
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" value="sss">
+            <button><i class="fas fa-search"></i></button>
+            <!-- <input type="button" value=" "><i class="fas fa-search"></i> -->
+        </div>
+        <div class="bascet">
+            <div class="ctnIcon">
+                <i class="fas fa-retweet"></i>
+                <i class="far fa-heart"></i>
+                <div class="shopifyIcon">
+                    <i class="fab fa-shopify"></i>
+                    <span><p>2</p></span>
+                </div>
+            </div>
+        </div>
+    </div>
     <menu>
         <div class="menuBnt" (click)="showMenu()">Меню
             <img src="/assets/img/menu.svg" alt="">
         </div>
-        <div class="menuVertical" [ngClass]="{hideMenu:!hideMenu}">
+        <div class="menuVertical" *ngIf="hideMenu">
             <ul>
                 <li>Ноутбуки</li>
                 <li>Компьютеры</li>
