@@ -16,14 +16,15 @@
 
 .main {
     width: 78%;
-    min-height: 500px;
+    min-height: 800px;
+    /* height: ; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-row-gap: 1em;
     grid-column-gap: 5px;
-    grid-template-rows: repeat(auto-fill, minmax(349px, 350px)); /*поправити*/
-    justify-items: center;
-    align-content: flex-start;
+    grid-template-rows: repeat(auto-fit, 350px); /*поправити*/
+    /* justify-items: center; */
+    /* align-content: flex-end; */
     margin-bottom: 200px;
 }
 
@@ -34,6 +35,7 @@
     overflow: hidden;
     background-color: white;
     position: relative;
+    height: 350px;
 }
 
 .product:hover {
@@ -64,6 +66,8 @@
     font-size: 16px;
     font-weight: bold;
     color: #0062BD;
+    height: 60px;
+    overflow: hidden;
 }
 
 .product p {
