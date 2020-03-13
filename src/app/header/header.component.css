@@ -75,7 +75,6 @@ menu>a {
     cursor: pointer;
     position: relative;
     font-weight: bold;
-    z-index: 2;
 }
 
 .menuBnt>img {
