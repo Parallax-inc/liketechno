@@ -22,19 +22,24 @@
         </div>
     </div>
     <div class="main">
-        <!-- <a routerLink='/details'> -->
-            <div class="product" *ngFor="let item of getProductArray" routerLink='/details'>
-                <p class="category">{{item.categoryes}}</p>
-                <div class="firstimgProd">
-                    <img src="{{item.images[0].path}}" alt="">
-                </div>
-                <p class="titleProd">{{item.nameProd}}</p>
-                <p class="brandName">Бренд: {{item.nameBrend}}</p>
-                <p class="price">{{item.price}} грн.</p>
-                <p class="compare">Добавить к сравнению</p>
-                <div class="details"><img src="assets/icons/arrow.svg" alt=""></div>
-                <span class="altDetails">Подробнее</span>
+
+        <div class="product" *ngFor="let item of getProductArray">
+            <p class="category">{{item.categoryes}}</p>
+            <div class="firstimgProd">
+                <img src="{{item.images[0].path}}" alt="">
             </div>
-        <!-- </a> -->
+            <p class="titleProd">{{item.nameProd}}</p>
+            <p class="brandName">Бренд: {{item.nameBrend}}</p>
+            <p class="price">{{item.price}} грн.</p>
+            <div class="compare"><img src="assets/icons/libra.svg" alt=""> Добавить к сравнению</div>
+            <div class="details" routerLink='/details'><img src="assets/icons/arrow.svg" alt=""></div>
+            <span class="altDetails">Подробнее</span>
+            <div class="fichi">
+                <img src="assets/icons/new.svg" alt="">
+                <img src="assets/icons/vip.svg" alt="">
+                <img src="assets/icons/like.svg" alt="">
+            </div>
+        </div>
+
     </div>
 </div>
