@@ -9,20 +9,10 @@ import { AuthService } from '../shared/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  hideMenu: boolean = false;
-
 
   constructor(private autorized: IsLoggedIn, private authe: AuthService) { }
 
   ngOnInit() {
 
   }
-
-showMenu() {
-  if (this.hideMenu) {
-    this.hideMenu = false;
-  } else {
-    this.hideMenu = true;
-  }
-}
 }

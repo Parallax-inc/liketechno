@@ -18,6 +18,7 @@ a{
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .stripHorizontal {
@@ -64,21 +65,24 @@ menu>a {
 
 .menuBnt {
     width: 250px;
-    height: 100%;
+    height: 45px;
     background-color: #A3D133;
     color: white;
-    padding: 10px 55px;
-    border-radius: 10px;
+    font-size: 14px;
+    padding: 12px 55px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     cursor: pointer;
     position: relative;
     font-weight: bold;
+    z-index: 2;
 }
 
 .menuBnt>img {
     position: absolute;
-    left: 15px;
-    width: 25px;
-    height: 25px;
+    left: 30px;
+    width: 18px;
+    height: 18px;
 }
 
 .menuVertical {
@@ -87,12 +91,13 @@ menu>a {
     background-color: white;
     border-radius: 0 0 5px 5px;
     position: absolute;
-    top: 165px;
+    top: 225px;
     z-index: 1;
 }
-
-.hideMenu {
-    display: none;
+.container-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menuVertical li {
@@ -107,4 +112,100 @@ menu>a {
 .menuVertical li:hover {
     background-color: rgba(0, 0, 0, 0.05);
     font-weight: bold;
+}
+
+.styleP{
+    font-size: 13px;
+}
+.ulList{
+    display: flex;
+}
+.ulList li{
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 15px;
+    padding-left: 10px;
+}
+.ulList li:nth-child(2){
+    border-left: 2px solid #DAE2E2;
+}
+.ulList li:nth-child(3){
+    border-left: 2px solid #DAE2E2;
+}
+.search{
+    width: 55%;
+}
+.search input[type='text']{
+    outline:none;
+    margin-top: 25px;
+    width: 80%;
+    padding: 10px;
+	border: 2px solid #A3D133;
+	background: white;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+.search button{
+    cursor: pointer;
+    outline:none;
+    padding: 10px 30px;
+    margin-top: 5px;
+    border: 2px solid #A3D133;
+    background: #A3D133;
+    border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+.search button:hover{
+    border: 2px solid rgb(114, 156, 8);
+    background-color: rgb(114, 156, 8);
+}
+.search button i{
+    color: white;
+    font-size: 14px;
+}
+.bascet{
+    width: 20%;
+}
+.logoCtn{
+    width: 25%;
+}
+.ctnIcon{
+    margin-top: 35px;
+}
+.shopifyIcon{
+    display: inline;
+}
+.shopifyIcon span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #A3D133;
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    left: 134px;
+}
+.shopifyIcon span p{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+}
+.ctnIcon i, .shopifyIcon{
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 22px;
+    color: rgb(116, 113, 113);
+}
+.ctnIcon i:hover{
+    color: #A3D133;
+}
+.ctnIcon i span{
+    position: relative;
+    top: 10px;
+    left: -10px;
+    width: 30px;
+    height: 20px;
+    background-color: #A3D133;
+    border-radius: 25%;
 }
