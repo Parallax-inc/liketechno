@@ -10,7 +10,8 @@
                     <a href="#"> <i class="fab fa-shopify"></i> Магазин</a>
                 </li>
                 <li>
-                    <a href="#"><i class="far fa-user"></i> Мой аккаунт</a>
+                    <a *ngIf="authe.logined" routerLink="account" (click)='auditLoginUser()'><i class="far fa-user"></i> Мой аккаунт</a>
+                    <a *ngIf="!authe.logined" routerLink="account" (click)='auditLoginUser()'><i class="far fa-user"></i> Войти в кабинет</a>
                 </li>
             </ul>
             <!-- <a *ngIf="authe.logined"  routerLink="account" (click)='auditLoginUser()'><span>Мой кабинет</span></a>

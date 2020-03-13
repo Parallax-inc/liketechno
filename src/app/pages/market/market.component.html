@@ -35,9 +35,9 @@
             <div class="details" routerLink='/details'><img src="assets/icons/arrow.svg" alt=""></div>
             <span class="altDetails">Подробнее</span>
             <div class="fichi">
-                <img src="assets/icons/new.svg" alt="">
-                <img src="assets/icons/vip.svg" alt="">
-                <img src="assets/icons/like.svg" alt="">
+                <img *ngIf="item.newer"  src="assets/icons/new.svg" alt="">
+                <img *ngIf="item.theBest" src="assets/icons/vip.svg" alt="">
+                <img *ngIf="item.recomend" src="assets/icons/like.svg" alt="">
             </div>
         </div>
 
