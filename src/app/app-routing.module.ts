@@ -16,7 +16,7 @@ import { PreferenceComponent } from './admin/catalog/preference/preference.compo
 import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
 import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 import { ProdDetailsComponent } from './pages/prod-details/prod-details.component';
-
+import { WishlistComponent } from './pages/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -26,6 +26,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'wishlist', component: WishlistComponent },
   { path: 'details', component: ProdDetailsComponent },
   {
     path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [

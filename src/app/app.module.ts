@@ -29,6 +29,7 @@ import { PreferenceComponent } from './admin/catalog/preference/preference.compo
 import { ProdAddComponent } from './admin/catalog/products/prod-add/prod-add.component';
 import { ProdEditComponent } from './admin/catalog/products/prod-edit/prod-edit.component';
 import { ProdDetailsComponent } from './pages/prod-details/prod-details.component';
+import { WishlistComponent } from './pages/wishlist/wishlist.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ProdDetailsComponent } from './pages/prod-details/prod-details.componen
     ProdAddComponent,
     ProdEditComponent,
     ProdDetailsComponent,
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,
