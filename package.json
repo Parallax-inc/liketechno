@@ -23,7 +23,7 @@
     "angular2-jwt": "^0.2.3",
     "@ckeditor/ckeditor5-angular": "^1.2.1",
     "@ckeditor/ckeditor5-build-classic": "^17.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-slick-carousel": "^0.4.7",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.5.4",
