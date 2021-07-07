@@ -33,7 +33,7 @@
         <div class="bascet">
             <div class="ctnIcon">
                 <i class="fas fa-retweet"></i>
-                <i class="far fa-heart"></i>
+                <i routerLink="wishlist" class="far fa-heart"></i>
                 <div class="shopifyIcon">
                     <i class="fab fa-shopify"></i>
                     <span><p>2</p></span>
@@ -42,10 +42,10 @@
         </div>
     </div>
     <menu>
-        <div class="menuBnt">Меню
+        <div class="menuBnt" (click)="showMenu()">Меню
             <img src="/assets/img/menu.svg" alt="">
         </div>
-        <div class="menuVertical">
+        <div class="menuVertical" *ngIf="hideMenu">
             <ul>
                 <li>Ноутбуки</li>
                 <li>Компьютеры</li>

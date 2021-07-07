@@ -75,7 +75,6 @@ menu>a {
     cursor: pointer;
     position: relative;
     font-weight: bold;
-    z-index: 2;
 }
 
 .menuBnt>img {
@@ -99,7 +98,9 @@ menu>a {
     display: flex;
     justify-content: space-between;
 }
-
+.hideMenu{
+    display: none;
+}
 .menuVertical li {
     font-size: 16px;
     list-style-type: none;
